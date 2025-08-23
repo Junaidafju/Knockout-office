@@ -1,0 +1,1760 @@
+/* About Page Styles - Optimized for Neon Theme - Version 1.0.2 */
+/* DEBUG: If you can see this comment in browser dev tools, the CSS is loading */
+
+/* DEBUG: This rule should make the body have a subtle border if CSS is loading */
+body.page .ko-about-section {
+    border-left: 3px solid #b0d136 !important;
+}
+
+/* Ensure the about hero section separator is at the very top edge */
+.ko-about-hero {
+    margin-top: 0 !important;
+    border-top: none;
+    /* Remove any inherited border */
+}
+
+/* Integration with marquee - ensure flush positioning */
+.sports-marquee + .about-wrapper .ko-about-hero,
+.sports-marquee ~ .about-wrapper .ko-about-hero {
+    margin-top: 0 !important;
+    padding-top: 60px !important;
+    border-top: none !important;
+}
+
+.sports-marquee + .about-wrapper .ko-about-section:first-child,
+.sports-marquee ~ .about-wrapper .ko-about-section:first-child {
+    margin-top: 0 !important;
+    border-top: none !important;
+}
+
+/* Utility class to ensure about section starts at top edge */
+.ko-about-section-top {
+    margin-top: 0 !important;
+    padding-top: 0;
+}
+
+.ko-about-section-top .ko-about-hero {
+    margin-top: 0;
+    padding-top: 120px;
+    /* Add extra padding to account for the separator */
+}
+
+/* Ensure separator is always visible at section boundary */
+.ko-about-section-top .ko-about-hero::before {
+    top: 0;
+    position: absolute;
+}
+
+:root {
+    --ko-bg-dark: #0a0a0a;
+    --ko-text-light: #ffffff;
+    --ko-accent-green: #b0d136;
+    --ko-accent-blue: #00d4ff;
+    --ko-secondary-gray: #b0b0b0;
+    --ko-card-bg: #111111;
+    --ko-border-color: #1a1a1a;
+    --ko-gradient: linear-gradient(90deg, var(--ko-accent-green), var(--ko-accent-blue));
+    --ko-glow: rgba(176, 209, 54, 0.8);
+    --ko-accent-pink: #ff006e;
+    --ko-accent-purple: #8b00ff;
+}
+
+/* General section padding */
+.ko-about-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0a;
+    /* Fallback */
+    background: var(--ko-bg-dark);
+    color: #ffffff;
+    /* Fallback */
+    color: var(--ko-text-light);
+    /* border-top: 2px solid #b0d136; */
+    /* Fallback */
+    border-top: 2px solid var(--ko-accent-green);
+    box-shadow: inset 0 0 50px rgba(176, 209, 54, 0.1);
+}
+
+@media (min-width: 768px) {
+    .ko-about-section {
+        padding: 8rem 0;
+    }
+}
+
+/* Hero Section */
+.ko-about-hero {
+    text-align: center;
+    padding: 100px 0 60px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--ko-bg-dark) 0%, #111111 100%);
+    margin-top: 0;
+    /* Position this section to start right after header */
+    padding-top: 120px;
+}
+
+.ko-about-hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    /* Position it above the section to appear right after header */
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 6px;
+    /* Make it slightly thicker for better visibility */
+    background: var(--ko-gradient);
+    box-shadow:
+        0 0 25px var(--ko-glow),
+        0 3px 15px rgba(176, 209, 54, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    z-index: 100;
+    /* High enough to appear above content */
+    animation: glowPulse 2s ease-in-out infinite alternate;
+    border-radius: 0 0 2px 2px;
+    /* Slight rounding on bottom */
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow:
+            0 0 20px var(--ko-glow),
+            0 2px 10px rgba(176, 209, 54, 0.3);
+    }
+
+    100% {
+        box-shadow:
+            0 0 30px var(--ko-glow),
+            0 2px 15px rgba(176, 209, 54, 0.5);
+    }
+}
+
+.ko-about-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23b0d136" opacity="0.1"/></svg>') repeat;
+    background-size: 100px 100px;
+    animation: particleFloat 15s linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+    }
+}
+
+.ko-about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--ko-accent-green);
+    text-shadow:
+        0 0 10px var(--ko-glow),
+        0 0 20px var(--ko-glow),
+        0 0 30px var(--ko-glow);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 10px var(--ko-glow), 0 0 20px var(--ko-glow), 0 0 30px var(--ko-glow);
+    }
+
+    100% {
+        text-shadow: 0 0 20px var(--ko-glow), 0 0 30px var(--ko-glow), 0 0 40px var(--ko-glow);
+    }
+}
+
+.ko-about-hero p {
+    color: var(--ko-secondary-gray);
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Divider */
+.ko-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--ko-gradient);
+    border-radius: 2px;
+    margin: 0 auto 2rem;
+    border: none;
+    box-shadow: 0 0 15px var(--ko-glow);
+    position: relative;
+    z-index: 2;
+}
+
+/* Content Sections */
+.ko-about-content {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--ko-bg-dark) 0%, #111111 100%);
+    position: relative;
+}
+
+.ko-about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(90deg, transparent 98%, rgba(176, 209, 54, 0.1) 100%),
+        linear-gradient(0deg, transparent 98%, rgba(176, 209, 54, 0.1) 100%);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+.ko-about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 992px) {
+    .ko-about-wrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 3.5rem;
+    }
+}
+
+.ko-about-image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: none;
+    flex: 0 0 100%;
+    max-width: 100%;
+    border: none;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Apply only fade-in effect to the image container with fade-in-up */
+.ko-about-image-container.ko-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-fill-mode: both;
+}
+
+@media (min-width: 992px) {
+    .ko-about-image-container {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+.ko-about-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.ko-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--ko-bg-dark);
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.ko-play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: var(--ko-accent-green);
+    color: var(--ko-bg-dark);
+    box-shadow: 0 0 20px var(--ko-glow);
+}
+
+.ko-experience-badge {
+    display: none !important;
+    /* Hide the experience badge completely */
+}
+
+.ko-d-block {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.ko-about-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    .ko-about-text {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+.ko-about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+}
+
+.ko-about-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--ko-gradient);
+}
+
+.ko-about-text h2 span {
+    background: var(--ko-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ko-about-text p {
+    color: var(--ko-secondary-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.ko-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 1.5rem;
+}
+
+.ko-feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ko-feature-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.ko-feature-icon {
+    color: var(--ko-accent-green);
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 5px var(--ko-glow));
+}
+
+.ko-feature-content {
+    flex: 1;
+}
+
+.ko-feature-title {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.ko-feature-desc {
+    color: var(--ko-secondary-gray);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Buttons and Actions */
+.ko-about-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.ko-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+.ko-btn-primary {
+    background: var(--ko-gradient);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ko-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--ko-accent-pink), var(--ko-accent-purple));
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.ko-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px var(--ko-glow);
+}
+
+.ko-btn-primary:hover::before {
+    width: 100%;
+}
+
+.ko-play-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.ko-play-circle:hover {
+    background: var(--ko-accent-green);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px var(--ko-glow);
+    border-color: transparent;
+    color: var(--ko-bg-dark);
+}
+
+/* Features Section */
+.ko-features {
+    background: linear-gradient(to bottom, var(--ko-bg-dark) 0%, #111111 100%);
+    padding: 6rem 0;
+    position: relative;
+    border-top: 1px solid var(--ko-accent-green);
+    box-shadow: inset 0 0 50px rgba(176, 209, 54, 0.1);
+}
+
+.ko-section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.ko-section-header h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.ko-section-header h2 span {
+    background: var(--ko-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ko-section-header p {
+    color: var(--ko-secondary-gray);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.ko-features-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .ko-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .ko-features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.ko-feature-card {
+    background: var(--ko-card-bg);
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ko-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.ko-feature-icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(176, 209, 54, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--ko-accent-green);
+    transition: all 0.3s ease;
+    border: 2px solid var(--ko-accent-green);
+}
+
+.ko-feature-card:hover .ko-feature-icon-circle {
+    background: var(--ko-gradient);
+    color: var(--ko-bg-dark);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--ko-glow);
+}
+
+.ko-feature-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.ko-feature-card-desc {
+    color: var(--ko-secondary-gray);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Team Section */
+.ko-team {
+    background: var(--ko-bg-dark);
+    padding: 6rem 0;
+}
+
+.ko-team-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .ko-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .ko-team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.ko-team-card {
+    background: var(--ko-card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--ko-border-color);
+}
+
+.ko-team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: var(--ko-accent-green);
+}
+
+.ko-team-member-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--ko-border-color);
+}
+
+.ko-team-member-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.ko-team-member-role {
+    color: var(--ko-accent-green);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.ko-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.ko-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--ko-secondary-gray);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.ko-social-link:hover {
+    background: var(--ko-gradient);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Wavy Separator for About the Sports Cafe Section */
+.ko-wavy-separator {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: 2rem;
+    height: 60px;
+    background: transparent;
+}
+
+.editorial {
+    display: block;
+    width: 100%;
+    height: 60px;
+    max-height: 60px;
+    margin: 0;
+    z-index: 5;
+    bottom: 0;
+    position: absolute;
+    left: 0px;
+    float: left;
+}
+
+.parallax1 > use {
+    animation: move-forever1 10s linear infinite;
+}
+.parallax1 > use:nth-child(1) {
+    animation-delay: -2s;
+}
+
+.parallax2 > use {
+    animation: move-forever2 8s linear infinite;
+}
+.parallax2 > use:nth-child(1) {
+    animation-delay: -2s;
+}
+
+.parallax3 > use {
+    animation: move-forever3 6s linear infinite;
+}
+.parallax3 > use:nth-child(1) {
+    animation-delay: -2s;
+}
+
+.parallax4 > use {
+    animation: move-forever4 4s linear infinite;
+}
+.parallax4 > use:nth-child(1) {
+    animation-delay: -2s;
+}
+
+@keyframes move-forever1 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+    100% {
+        transform: translate(-90px, 0%);
+    }
+}
+
+@keyframes move-forever2 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+@keyframes move-forever3 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+    100% {
+        transform: translate(-90px, 0%);
+    }
+}
+
+@keyframes move-forever4 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+/* Responsive heights for different screen sizes */
+@media (min-width: 768px) {
+    .editorial {
+        height: 80px;
+        max-height: 80px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .editorial {
+        height: 100px;
+        max-height: 100px;
+    }
+}
+
+/* About the Sports Cafe specific layout - Modern Mobile First Design */
+.ko-about-cafe .ko-about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Mobile Order: 1. Header, 2. Image, 3. Content */
+.ko-about-cafe .ko-about-header {
+    order: 1;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+
+.ko-about-cafe .ko-about-image-container {
+    order: 2;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.ko-about-cafe .ko-about-text {
+    order: 3;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Enhanced header styling */
+.ko-about-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.ko-about-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--ko-gradient);
+    border-radius: 2px;
+    box-shadow: 0 0 20px var(--ko-glow);
+}
+
+.ko-about-header h2 span {
+    background: var(--ko-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.ko-about-header h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--ko-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(2px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* Modern Desktop Layout */
+@media (min-width: 992px) {
+    .ko-about-cafe .ko-about-wrapper {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        grid-template-rows: auto 1fr;
+        gap: 4rem 6rem;
+        align-items: start;
+        text-align: left;
+        padding: 0 2rem;
+        max-width: 1600px;
+    }
+    
+    /* Left column: Header and text content */
+    .ko-about-cafe .ko-about-header {
+        order: 1;
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 2rem;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .ko-about-cafe .ko-about-text {
+        order: 2;
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Right column: Image container spanning both rows */
+    .ko-about-cafe .ko-about-image-container {
+        order: 3;
+        grid-column: 2;
+        grid-row: 1 / 3;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        max-width: 600px;
+        position: sticky;
+        top: 2rem;
+    }
+    
+    /* Desktop: Align header underline to left */
+    .ko-about-cafe .ko-about-header h2::after {
+        left: 0;
+        transform: none;
+    }
+    
+    /* Enhanced spacing for desktop */
+    .ko-about-cafe .ko-about-header h2 {
+        font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Ultra-wide screens optimization */
+@media (min-width: 1400px) {
+    .ko-about-cafe .ko-about-wrapper {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+        gap: 0.5rem 8rem;
+        max-width: 1800px;
+    }
+    
+    .ko-about-cafe .ko-about-image-container {
+        max-width: 700px;
+    }
+}
+
+/* Remove border from the second about section (Our Vision) */
+.ko-about-cafe + .ko-about-content {
+    border-top: none !important;
+    margin-top: 0;
+}
+
+/* Enhanced Lottie Animation Styling */
+.ko-lottie-container {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(176, 209, 54, 0.15) 0%, transparent 70%);
+    border: none !important;
+    border-radius: 25px;
+    overflow: visible;
+    backdrop-filter: blur(20px);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        inset 0 0 100px rgba(176, 209, 54, 0.1);
+    transition: all 0.4s ease;
+}
+
+@media (min-width: 768px) {
+    .ko-lottie-container {
+        min-height: 600px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ko-lottie-container {
+        min-height: 650px;
+    }
+}
+
+.ko-lottie-wrapper {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 600px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: linear-gradient(145deg, 
+        rgba(176, 209, 54, 0.1) 0%, 
+        rgba(0, 212, 255, 0.1) 50%, 
+        rgba(176, 209, 54, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(176, 209, 54, 0.3);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.ko-lottie-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--ko-gradient);
+    border-radius: 22px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+    0% {
+        box-shadow: 
+            0 0 20px rgba(176, 209, 54, 0.3),
+            inset 0 0 20px rgba(176, 209, 54, 0.1);
+    }
+    100% {
+        box-shadow: 
+            0 0 40px rgba(176, 209, 54, 0.6),
+            inset 0 0 30px rgba(176, 209, 54, 0.2);
+    }
+}
+
+.ko-lottie-container:hover .ko-lottie-wrapper {
+    transform: scale(1.05);
+    border-color: var(--ko-accent-green);
+    background: linear-gradient(145deg, 
+        rgba(176, 209, 54, 0.2) 0%, 
+        rgba(0, 212, 255, 0.2) 50%, 
+        rgba(176, 209, 54, 0.2) 100%);
+    box-shadow: 
+        0 30px 60px rgba(176, 209, 54, 0.4),
+        inset 0 0 50px rgba(176, 209, 54, 0.2);
+}
+
+.ko-lottie-container:hover .ko-lottie-wrapper::before {
+    opacity: 1;
+}
+
+.ko-lottie-wrapper dotlottie-wc {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px;
+    filter: 
+        drop-shadow(0 15px 35px rgba(176, 209, 54, 0.3))
+        brightness(1.1)
+        contrast(1.2);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.ko-lottie-container:hover .ko-lottie-wrapper dotlottie-wc {
+    filter: 
+        drop-shadow(0 20px 50px rgba(176, 209, 54, 0.5))
+        brightness(1.2)
+        contrast(1.3)
+        saturate(1.1);
+    transform: scale(1.02);
+}
+
+/* Glow Effect Layer */
+.ko-lottie-glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, 
+        rgba(176, 209, 54, 0.2) 0%, 
+        rgba(176, 209, 54, 0.1) 30%, 
+        transparent 70%);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: pulseGlow 4s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.ko-lottie-container:hover .ko-lottie-glow-effect {
+    animation-duration: 2s;
+    opacity: 1;
+}
+
+/* Enhanced levitation animation for Lottie container */
+.ko-lottie-container.ko-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards, lottieFloat 6s ease-in-out 1.2s infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes lottieFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-8px) rotate(0.5deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-8px) rotate(-0.5deg);
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .ko-lottie-container {
+        min-height: 400px;
+        margin: 2rem 0;
+    }
+    
+    .ko-lottie-wrapper {
+        min-width: 300px;
+        min-height: 300px;
+        width: 85%;
+        height: 85%;
+    }
+    
+    .ko-lottie-glow-effect {
+        width: 110%;
+        height: 110%;
+    }
+}
+
+@media (max-width: 480px) {
+    .ko-lottie-container {
+        min-height: 350px;
+    }
+    
+    .ko-lottie-wrapper {
+        min-width: 280px;
+        min-height: 280px;
+    }
+}
+
+/* CEO Section Styling - Complete Redesign */
+.ko-ceo-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.ko-ceo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .ko-ceo-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+}
+
+.ko-ceo-info {
+    flex: 1;
+    order: 2;
+}
+
+@media (min-width: 992px) {
+    .ko-ceo-info {
+        order: 1;
+    }
+}
+
+.ko-ceo-nameplate {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .ko-ceo-nameplate {
+        text-align: left;
+    }
+}
+
+.ko-ceo-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    background: var(--ko-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.ko-ceo-title {
+    font-size: 1.2rem;
+    color: var(--ko-accent-green);
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px var(--ko-glow);
+}
+
+.ko-ceo-description {
+    margin-top: 2rem;
+}
+
+.ko-ceo-description p {
+    color: var(--ko-secondary-gray);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.ko-ceo-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .ko-ceo-highlights {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+.ko-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: rgba(176, 209, 54, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(176, 209, 54, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.ko-highlight-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(176, 209, 54, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.ko-highlight-item:hover {
+    background: rgba(176, 209, 54, 0.2);
+    border-color: var(--ko-accent-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(176, 209, 54, 0.3);
+}
+
+.ko-highlight-item:hover::before {
+    left: 100%;
+}
+
+.ko-highlight-icon {
+    color: var(--ko-accent-green);
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 8px var(--ko-glow));
+    flex-shrink: 0;
+}
+
+.ko-highlight-item span {
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 2;
+}
+
+.ko-ceo-image-container {
+    flex: 0 0 auto;
+    max-width: 400px;
+    width: 100%;
+    order: 1;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .ko-ceo-image-container {
+        order: 2;
+        flex: 0 0 350px;
+    }
+}
+
+.ko-ceo-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(176, 209, 54, 0.2);
+    transition: all 0.3s ease;
+    border: 3px solid rgba(176, 209, 54, 0.3);
+    position: relative;
+}
+
+.ko-ceo-image::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: var(--ko-gradient);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.ko-ceo-image:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(176, 209, 54, 0.4);
+    border-color: transparent;
+}
+
+.ko-ceo-image:hover::before {
+    opacity: 1;
+}
+
+/* Add subtle animation to the CEO image container */
+.ko-ceo-image-container.ko-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards, subtleLevitation 6s ease-in-out 1s infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes subtleLevitation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive adjustments for CEO section */
+@media (max-width: 768px) {
+    .ko-ceo-name {
+        font-size: 2rem;
+    }
+    
+    .ko-ceo-title {
+        font-size: 1rem;
+    }
+    
+    .ko-ceo-description p {
+        font-size: 1rem;
+    }
+    
+    .ko-ceo-highlights {
+        flex-direction: column;
+    }
+    
+    .ko-highlight-item {
+        padding: 0.75rem 1rem;
+        justify-content: center;
+    }
+    
+    .ko-ceo-image-container {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ko-ceo-name {
+        font-size: 1.75rem;
+    }
+    
+    .ko-ceo-wrapper {
+        padding: 2rem 0;
+    }
+    
+    .ko-ceo-content {
+        gap: 2rem;
+    }
+    
+    .ko-highlight-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Partners Section */
+.partners-section {
+    background: linear-gradient(to bottom, var(--ko-bg-dark) 0%, #1A162B 100%);
+    padding: 4rem 0;
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.partner-logo {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.partner-logo img {
+    max-width: 120px;
+    height: auto;
+    filter: grayscale(100%) brightness(2);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo:hover img {
+    filter: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .ko-about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .ko-about-hero p {
+        font-size: 1.1rem;
+    }
+
+    .ko-about-text h2 {
+        font-size: 2rem;
+    }
+
+    .ko-section-header h2 {
+        font-size: 2rem;
+    }
+
+    .ko-about-wrapper {
+        gap: 2rem;
+    }
+
+    .ko-about-actions {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: stretch;
+        margin-bottom: 1rem;
+    }
+
+    .ko-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ko-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ko-container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ko-about-hero {
+        padding: 60px 0 40px;
+    }
+
+    .ko-about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .ko-team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ko-feature-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Container */
+.ko-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Text Utilities */
+.ko-text-primary {
+    color: var(--ko-accent-green) !important;
+    text-shadow: 0 0 10px var(--ko-glow);
+}
+
+.ko-d-block {
+    display: block;
+}
+
+/* Partners Section */
+.ko-partners {
+    background: linear-gradient(to bottom, var(--ko-bg-dark) 0%, #111111 100%);
+    padding: 4rem 0;
+    border-top: 1px solid var(--ko-accent-green);
+}
+
+.ko-partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ko-partner-logo {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.ko-partner-logo:hover {
+    opacity: 1;
+}
+
+.ko-partner-img {
+    max-width: 120px;
+    height: auto;
+    filter: grayscale(100%) brightness(2);
+    transition: filter 0.3s ease;
+}
+
+.ko-partner-logo:hover .ko-partner-img {
+    filter: none;
+}
+
+/* Animation */
+/* Visible levitation animation specifically for image container with fade-in-up */
+@keyframes visibleLevitation {
+    0% {
+        transform: translateY(0px);
+        box-shadow:
+            0 25px 50px rgba(0, 0, 0, 0.4),
+            0 0 35px rgba(176, 209, 54, 0.3);
+    }
+    50% {
+        transform: translateY(-30px);
+        box-shadow:
+            0 55px 90px rgba(0, 0, 0, 0.6),
+            0 0 60px rgba(176, 209, 54, 0.5);
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow:
+            0 25px 50px rgba(0, 0, 0, 0.4),
+            0 0 35px rgba(176, 209, 54, 0.3);
+    }
+}
+
+/* Slow levitation animation for image container - more visible */
+@keyframes slowLevitation {
+    0% {
+        transform: translateY(0px);
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.4),
+            0 0 30px rgba(176, 209, 54, 0.2);
+    }
+    25% {
+        transform: translateY(-15px);
+        box-shadow:
+            0 35px 60px rgba(0, 0, 0, 0.5),
+            0 0 40px rgba(176, 209, 54, 0.3);
+    }
+    50% {
+        transform: translateY(-25px);
+        box-shadow:
+            0 45px 70px rgba(0, 0, 0, 0.6),
+            0 0 50px rgba(176, 209, 54, 0.4);
+    }
+    75% {
+        transform: translateY(-15px);
+        box-shadow:
+            0 35px 60px rgba(0, 0, 0, 0.5),
+            0 0 40px rgba(176, 209, 54, 0.3);
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.4),
+            0 0 30px rgba(176, 209, 54, 0.2);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ko-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.ko-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.ko-delay-2 {
+    animation-delay: 0.4s;
+}
+
+.ko-delay-3 {
+    animation-delay: 0.6s;
+}
+/* Specific styling for about page to position separator correctly */
+.page-template-page-about .ko-about-hero {
+    margin-top: 0 !important;
+    padding-top: 140px; /* Extra padding to account for header and separator */
+}
+
+.page-template-page-about .ko-about-hero::before {
+    top: -140px; /* Position it right after the header */
+    position: absolute;
+}
+
+/* Alternative approach - create a separator that spans full width at top of content */
+.page-template-page-about .site-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--ko-gradient);
+    box-shadow:
+        0 0 25px var(--ko-glow),
+        0 3px 15px rgba(176, 209, 54, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    z-index: 100;
+    animation: glowPulse 2s ease-in-out infinite alternate;
+    border-radius: 0 0 2px 2px;
+}
+
+/* Ensure the site-content has relative positioning for the separator */
+.page-template-page-about .site-content {
+    position: relative;
+    padding-top: 10px; /* Small padding to accommodate the separator */
+}
+
+/* Video Styling for About Section - Reduced Height */
+.ko-about-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: none;
+    backdrop-filter: none;
+    background: transparent;
+    object-fit: contain;
+    min-height: 280px;
+    max-height: 350px;
+    max-width: 100%;
+}
+
+/* Ensure video container adjusts to video aspect ratio - Reduced Height */
+.ko-about-image-container:has(.ko-about-video) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    max-height: 400px;
+}
+
+.ko-about-video:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Enhanced video container styling */
+.ko-about-image-container:has(.ko-about-video) {
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    padding: 0;
+}
+
+.ko-about-image-container:has(.ko-about-video):hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Video specific mobile optimizations */
+@media (max-width: 768px) {
+    .ko-about-video {
+        min-height: 250px;
+        border-radius: 12px;
+    }
+    
+    .ko-about-image-container:has(.ko-about-video) {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ko-about-video {
+        min-height: 200px;
+        border-radius: 10px;
+    }
+    
+    .ko-about-image-container:has(.ko-about-video) {
+        padding: 0.5rem;
+    }
+}
+

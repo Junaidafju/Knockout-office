@@ -1,0 +1,16 @@
+This directory contains theme assets:
+
+Required Images:
+- knockout-bowling-logo.png (Your bowling logo)
+- hero-bg.jpg (Bowling lanes background image)
+- gallery/ folder with sample images:
+  - lane-1.jpg, lane-2.jpg
+  - event-1.jpg, event-2.jpg  
+  - food-1.jpg, food-2.jpg
+  - facility-1.jpg, facility-2.jpg
+  - friday-night.jpg
+  - family-day.jpg
+  - corporate.jpg
+
+These images will make your website look complete and professional.
+You can replace these with your actual bowling alley photos.

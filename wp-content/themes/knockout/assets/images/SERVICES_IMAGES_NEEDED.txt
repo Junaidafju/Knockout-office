@@ -1,0 +1,20 @@
+REQUIRED IMAGES FOR SERVICES SECTION
+=====================================
+
+Please add the following images to the assets/images/ folder:
+
+1. lavish-food.jpg - High-quality image of your food/restaurant area
+2. pubs-bars.jpg - Image of your bar/pub area with drinks/atmosphere  
+3. hookah-lounge.jpg - Image of your hookah lounge area
+4. bowling-lanes.jpg - Image of your 6-lane bowling alley
+5. arcade-games.jpg - Image of your AR/VR gaming zone and arcade games
+
+Image Requirements:
+- Format: JPG or PNG
+- Recommended size: 800x600 pixels minimum
+- High quality/resolution for best display
+- Should showcase the actual areas of your establishment
+
+Once you add these images, your services section will display perfectly with the card-based layout matching your design requirements.
+
+Note: The services template (template-parts/services.php) and CSS (assets/css/experience-section.css) are already configured and ready to use.
