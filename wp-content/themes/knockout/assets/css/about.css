@@ -74,6 +74,11 @@ body.page .ko-about-section {
     /* Fallback */
     border-top: 2px solid var(--ko-accent-green);
     box-shadow: inset 0 0 50px rgba(176, 209, 54, 0.1);
+    /* Ensure visibility on all devices */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -702,6 +707,9 @@ body.page .ko-about-section {
     margin-top: 2rem;
     height: 60px;
     background: transparent;
+    /* Ensure proper rendering on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .editorial {
@@ -715,6 +723,9 @@ body.page .ko-about-section {
     position: absolute;
     left: 0px;
     float: left;
+    /* Ensure proper rendering on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .parallax1 > use {
@@ -806,6 +817,11 @@ body.page .ko-about-section {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
+    /* Force hardware acceleration for mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 /* Mobile Order: 1. Header, 2. Image, 3. Content */
@@ -814,6 +830,9 @@ body.page .ko-about-section {
     width: 100%;
     max-width: 800px;
     margin-bottom: 1rem;
+    /* Ensure visibility on mobile */
+    position: relative;
+    z-index: 10;
 }
 
 .ko-about-cafe .ko-about-image-container {
@@ -821,12 +840,18 @@ body.page .ko-about-section {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    /* Ensure visibility on mobile */
+    position: relative;
+    z-index: 10;
 }
 
 .ko-about-cafe .ko-about-text {
     order: 3;
     width: 100%;
     max-width: 700px;
+    /* Ensure visibility on mobile */
+    position: relative;
+    z-index: 10;
 }
 
 /* Enhanced header styling */
@@ -889,6 +914,9 @@ body.page .ko-about-section {
         text-align: left;
         padding: 0 2rem;
         max-width: 1600px;
+        /* Ensure grid works on all devices */
+        -webkit-display: grid;
+        -ms-display: grid;
     }
     
     /* Left column: Header and text content */
@@ -899,6 +927,9 @@ body.page .ko-about-section {
         margin-bottom: 2rem;
         width: 100%;
         max-width: none;
+        /* Ensure visibility on mobile */
+        position: relative;
+        z-index: 10;
     }
     
     .ko-about-cafe .ko-about-text {
@@ -908,6 +939,9 @@ body.page .ko-about-section {
         align-self: start;
         width: 100%;
         max-width: none;
+        /* Ensure visibility on mobile */
+        position: relative;
+        z-index: 10;
     }
     
     /* Right column: Image container spanning both rows */
@@ -921,6 +955,9 @@ body.page .ko-about-section {
         max-width: 600px;
         position: sticky;
         top: 2rem;
+        /* Ensure visibility on mobile */
+        position: relative;
+        z-index: 10;
     }
     
     /* Desktop: Align header underline to left */
@@ -1495,6 +1532,47 @@ body.page .ko-about-section {
     .ko-container {
         padding: 0 1rem;
     }
+    
+    /* Mobile-specific fixes for OPPO and other devices */
+    .ko-about-cafe .ko-about-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .ko-about-cafe .ko-about-header,
+    .ko-about-cafe .ko-about-image-container,
+    .ko-about-cafe .ko-about-text {
+        position: relative !important;
+        z-index: 10 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+    
+    /* Force hardware acceleration on mobile */
+    .ko-about-section {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    /* Prevent JavaScript interference on mobile */
+    .ko-about-cafe .ko-about-wrapper * {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+    
+    /* Ensure video elements are always visible on mobile */
+    .ko-about-video {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1512,6 +1590,26 @@ body.page .ko-about-section {
 
     .ko-feature-card {
         padding: 2rem 1.5rem;
+    }
+    
+    /* Extra small screen fixes */
+    .ko-about-cafe .ko-about-wrapper {
+        gap: 1.5rem !important;
+        padding: 0 0.5rem !important;
+    }
+    
+    .ko-about-cafe .ko-about-header h2 {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .ko-about-cafe .ko-about-image-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    .ko-about-cafe .ko-about-text {
+        max-width: 100% !important;
     }
 }
 
@@ -1716,6 +1814,15 @@ body.page .ko-about-section {
     max-height: 400px;
 }
 
+/* Prevent JavaScript interference - Force visibility */
+.ko-about-image-container {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
 .ko-about-video:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
@@ -1740,10 +1847,28 @@ body.page .ko-about-section {
     .ko-about-video {
         min-height: 250px;
         border-radius: 12px;
+        /* Ensure video is visible on mobile */
+        position: relative;
+        z-index: 10;
     }
     
     .ko-about-image-container:has(.ko-about-video) {
         padding: 0.75rem;
+        /* Ensure container is visible on mobile */
+        position: relative;
+        z-index: 10;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+    
+    /* Fallback for devices that don't support :has() */
+    .ko-about-image-container {
+        position: relative;
+        z-index: 10;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
     }
 }
 
