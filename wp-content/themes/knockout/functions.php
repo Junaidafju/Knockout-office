@@ -129,9 +129,26 @@ function knockout_scripts() {
 
     // Enqueue navigation script for mobile menu
     wp_enqueue_script('knockout-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0.0', true);
+    // Smooth wheel scrolling (desktop only)
+    wp_enqueue_script('knockout-smooth-scroll', get_template_directory_uri() . '/js/smooth-scroll.js', array(), '1.0.0', true);
     
     // Enqueue about page styles - load on all pages to ensure availability
     wp_enqueue_style('knockout-about', get_template_directory_uri() . '/assets/css/about.css', array('knockout-style', 'knockout-neon-theme'), '1.0.5');
+
+    // Celebration burst effect (site-wide on load)
+    wp_enqueue_style(
+        'knockout-burst',
+        get_template_directory_uri() . '/assets/css/burst.css',
+        array('knockout-style'),
+        '1.0.0'
+    );
+    wp_enqueue_script(
+        'knockout-burst',
+        get_template_directory_uri() . "/js/burst.js",
+        array(),
+        '1.0.0',
+        true
+    );
     
     // Enqueue front page script for homepage interactions
     if (is_front_page()) {
