@@ -1533,7 +1533,7 @@ body.page .ko-about-section {
         padding: 0 1rem;
     }
     
-    /* Mobile-specific fixes for OPPO and other devices */
+    /* Mobile-specific fixes for OPPO and other devices - Consolidated */
     .ko-about-cafe .ko-about-wrapper {
         display: flex !important;
         flex-direction: column !important;
@@ -1880,6 +1880,87 @@ body.page .ko-about-section {
     
     .ko-about-image-container:has(.ko-about-video) {
         padding: 0.5rem;
+    }
+}
+
+/* Mobile-specific fixes for OPPO and other devices - Consolidated */
+@media (max-width: 768px) {
+    .ko-about-cafe .ko-about-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .ko-about-cafe .ko-about-header,
+    .ko-about-cafe .ko-about-image-container,
+    .ko-about-cafe .ko-about-text {
+        position: relative !important;
+        z-index: 10 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+    
+    /* Force hardware acceleration on mobile */
+    .ko-about-section {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    /* Prevent JavaScript interference on mobile */
+    .ko-about-cafe .ko-about-wrapper * {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+    
+    /* Ensure video elements are always visible on mobile */
+    .ko-about-video {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .ko-about-hero {
+        padding: 60px 0 40px;
+    }
+
+    .ko-about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .ko-team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ko-feature-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Extra small screen fixes */
+    .ko-about-cafe .ko-about-wrapper {
+        gap: 1.5rem !important;
+        padding: 0 0.5rem !important;
+    }
+    
+    .ko-about-cafe .ko-about-header h2 {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .ko-about-cafe .ko-about-image-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    .ko-about-cafe .ko-about-text {
+        max-width: 100% !important;
     }
 }
 

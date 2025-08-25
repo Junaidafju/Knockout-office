@@ -324,13 +324,17 @@ body {
 /* Mobile Navigation */
 .mobile-navigation {
     display: none;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 100%;
+    background: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed !important;
+    top: var(--ko-header-height, 60px) !important;
     left: 0;
     right: 0;
-    z-index: 15;
+    z-index: 2147483647 !important; /* ensure above all layers */
+    border-top: 2px solid #b0d136;
+    height: calc(100vh - var(--ko-header-height, 60px)) !important;
+    overflow-y: auto !important;
 }
 
 .mobile-navigation ul {
@@ -782,7 +786,7 @@ body {
 /* Ensure consistent positioning across all cards */
 .events-section .instructor-name {
     color: #FFD700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -811,36 +815,36 @@ body {
 }
 
 
-.events-section .event-description {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin: 0 0 15px 0;
-    max-width: 65%;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    flex-grow: 1;
-}
+    .events-section .event-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin: 0 0 15px 0;
+        max-width: 65%;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex-grow: 1;
+    }
 
-.events-section .event-details-btn {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: fit-content;
-    margin: 0;
-    flex-grow: 0;
-}
+    .events-section .event-details-btn {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        margin: 0;
+        flex-grow: 0;
+    }
 
 .events-section .event-details-btn:hover {
     background: rgba(255, 215, 0, 0.1);
@@ -851,7 +855,7 @@ body {
 
 .instructor-name {
     color: #FFD700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -913,7 +917,7 @@ body {
 
 .event-description {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 20px;
     max-width: 65%;
@@ -1218,7 +1222,7 @@ body {
     }
 
     .events-section .section-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .events-carousel-wrapper {
@@ -1607,7 +1611,7 @@ body {
 }
 
 .gallery-content p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
     opacity: 0.9;
 }
@@ -1864,7 +1868,7 @@ body {
     background: #1a1a1a;
     color: #fff;
     padding: 3rem 0 1.5rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.6;
 }
 
@@ -2179,7 +2183,7 @@ ront Page Specific Styles */
 }
 
 .scroll-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -2366,7 +2370,7 @@ ront Page Specific Styles */
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -2414,7 +2418,7 @@ ront Page Specific Styles */
 
 .share-url label {
     color: #b0d136;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     display: block;
     margin-bottom: 0.5rem;
@@ -2609,7 +2613,7 @@ ront Page Specific Styles */
 }
 
 .scroll-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #b0d136;
@@ -3015,7 +3019,7 @@ ront Page Specific Styles */
     }
 
     .btn-icon {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -3043,14 +3047,19 @@ ront Page Specific Styles */
 /* Mobile Navigation */
 .mobile-navigation {
     display: none;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(10px);
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 15;
+    z-index: 9999 !important;
     border-top: 2px solid #b0d136;
+    /* Ensure mobile navigation is always on top */
+    position: fixed !important;
+    top: var(--ko-header-height, 60px) !important;
+    height: calc(100vh - var(--ko-header-height, 60px)) !important;
+    overflow-y: auto !important;
 }
 
 .mobile-navigation ul {
@@ -3068,16 +3077,17 @@ ront Page Specific Styles */
     display: block;
     padding: 1rem;
     text-decoration: none;
-    color: white;
+    color: white !important;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    font-size: 1rem !important;
 }
 
 .mobile-navigation a:hover {
     background-color: rgba(176, 209, 54, 0.1);
-    color: #b0d136;
+    color: #b0d136 !important;
 }
 
 /* FIXED: Mobile hamburger menu positioning */
@@ -3756,7 +3766,7 @@ button:focus {
     border-radius: 30px;
     color: #6c757d;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase;
@@ -4027,7 +4037,7 @@ button:focus {
 
 .calories-info::before {
     content: "🔥";
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .menu-item-price {
@@ -5022,7 +5032,7 @@ button:focus {
 
 .desktop-category-name {
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: #ffffff;
     transition: color 0.3s ease;
@@ -5632,7 +5642,7 @@ button:focus {
 
 .footer-copyright {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .footer-copyright p {
@@ -5748,7 +5758,7 @@ button:focus {
     }
 
     .footer-navigation a {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -5779,7 +5789,7 @@ button:focus {
         max-width: calc(100vw - 60px) !important;
         min-width: auto !important;
         padding: 0.8rem 1.5rem !important;
-        font-size: 0.9rem !important;
+        font-size: 0.8rem !important;
         letter-spacing: 0.5px !important;
         white-space: nowrap !important;
         overflow: hidden !important;
@@ -5946,26 +5956,43 @@ button:focus {
 @media (max-width: 768px) {
   /* Fixed mobile navigation */
   .mobile-navigation {
-    position: absolute;
-    top: 100%;
+    position: fixed !important;
+    top: var(--ko-header-height, 60px) !important; /* Adjust based on header height */
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(10px);
-    z-index: 90;
+    z-index: 9999 !important;
     display: none;
     overflow-y: auto;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     border-top: 2px solid #b0d136;
+    height: calc(100vh - var(--ko-header-height, 60px)) !important;
   }
   
   .mobile-navigation.active {
-    display: block;
+    display: block !important;
   }
   
   .mobile-menu-toggle {
-    z-index: 100;
+    z-index: 10000 !important;
     position: absolute;
+  }
+  
+  /* Prevent body scroll when mobile menu is open */
+  html.mobile-menu-open,
+  body.mobile-menu-open {
+    overflow: hidden !important;
+    height: 100vh !important;
+  }
+
+  /* Keep header on top while menu is open */
+  .site-header.header-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2147483647; /* higher than menu */
   }
   
   /* CRITICAL: Fix mobile overflow issues */

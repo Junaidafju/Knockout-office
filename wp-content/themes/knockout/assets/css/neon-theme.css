@@ -1012,8 +1012,7 @@ body::before {
     box-shadow: 0 0 15px var(--neon-green-glow);
     outline: none;
 }
-    outline: none;
-}
+
 
 /* Responsive Design */
 @media (max-width: 1199px) and (min-width: 1024px) {
@@ -1215,7 +1214,7 @@ body::before {
     }
     
     .event-description {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         line-height: 1.5;
         margin-bottom: 1.2rem;
         
@@ -1257,7 +1256,7 @@ body::before {
     
     .events-cta .btn {
         padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         max-width: 250px;
         width: 100%;
         display: inline-block;
@@ -1286,7 +1285,7 @@ body::before {
     }
     
     .events-section .section-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         line-height: 1.4;
     }
     
@@ -1358,7 +1357,7 @@ body::before {
     }
     
     .events-cta p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-bottom: 0.8rem;
     }
     
