@@ -244,6 +244,31 @@ body.page .ko-about-section {
     z-index: 2;
 }
 
+/* Mobile: Show heading/text above video in the Our Vision section only */
+@media (max-width: 768px) {
+    /* Reorder specifically for Our Vision: show H2 first, then video, then the rest */
+    .ko-about-section.ko-about-content .ko-about-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Flatten text container so its children can be ordered relative to siblings */
+    .ko-about-section.ko-about-content .ko-about-text {
+        display: contents;
+    }
+    /* 1) Heading first */
+    .ko-about-section.ko-about-content .ko-about-text > h2 {
+        order: 1;
+    }
+    /* 2) Video container second */
+    .ko-about-section.ko-about-content .ko-about-image-container {
+        order: 2;
+    }
+    /* 3) Everything else from the text block after video */
+    .ko-about-section.ko-about-content .ko-about-text > :not(h2) {
+        order: 3;
+    }
+}
+
 @media (min-width: 992px) {
     .ko-about-wrapper {
         flex-direction: row;
