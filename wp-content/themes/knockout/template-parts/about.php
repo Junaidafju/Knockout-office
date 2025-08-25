@@ -18,9 +18,9 @@
             <!-- Image/Video - appears second on mobile -->
             <div class="ko-about-image-container ko-fade-in-up ko-delay-1">
                 <video class="ko-about-video" autoplay muted loop playsinline>
-                    <source src="<?php echo get_template_directory_uri(); ?>/assets/images/about-knockout.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dcvn7lbh6/video/upload/v1755953017/Purple_3D_Modern_Cyber_Security_Mobile_Video_4_bt5akd.mp4" type="video/mp4">
                     <!-- Fallback image if video doesn't load -->
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/About-Us.svg" alt="About KnockOut" class="ko-about-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-us-img" alt="About KnockOut" class="ko-about-image">
                 </video>
             </div>
             
@@ -94,15 +94,15 @@
     <div class="ko-container">
         <div class="ko-about-wrapper">
             <div class="ko-about-image-container ko-fade-in-up">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/About-Us.svg" alt="Sports Cafe Interior">
-                <!-- <div class="ko-play-button">
-                    <i class="fas fa-play"></i>
-                </div> -->
+            <video class="ko-about-video" autoplay muted loop playsinline>
+                    <source src="https://res.cloudinary.com/dcvn7lbh6/video/upload/v1755948958/Purple_3D_Modern_Cyber_Security_Mobile_Video_3_zmvowi.mp4" type="video/mp4">
+                    <!-- Fallback image if video doesn't load -->
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-us-img.png" alt="About KnockOut" class="ko-about-image">
+                </video>
             </div>
             <div class="ko-about-text ko-fade-in-up ko-delay-1">
                 <h2>Our <span>Vision</span></h2>
-                <p>Welcome to KnockOut, Kolkata's revolutionary new destination where the thrill of cutting-edge sports technology meets the indulgence of a lavish culinary experience.</p>
-                <p>Our mission is to transcend the ordinary, offering a dynamic and immersive environment that caters to every facet of leisure. We envision a space where friends, families, and corporate teams can connect, compete, and celebrate, creating unforgettable memories through a seamless fusion of active entertainment, sophisticated dining, and vibrant social spaces.</p>
+                <p>Our vision is to transcend the ordinary, offering a dynamic and immersive environment that caters to every facet of leisure. We envision a space where friends, families, and corporate teams can connect, compete, and celebrate, creating unforgettable memories through a seamless fusion of active entertainment, sophisticated dining, and vibrant social spaces.</p>
                 
                 <ul class="ko-feature-list">
                     <li class="ko-feature-item">
