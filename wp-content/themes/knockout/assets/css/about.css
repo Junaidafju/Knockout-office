@@ -74,11 +74,6 @@ body.page .ko-about-section {
     /* Fallback */
     border-top: 2px solid var(--ko-accent-green);
     box-shadow: inset 0 0 50px rgba(176, 209, 54, 0.1);
-    /* Ensure visibility on all devices */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -261,7 +256,9 @@ body.page .ko-about-section {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: none;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(176, 209, 54, 0.2);
     flex: 0 0 100%;
     max-width: 100%;
     border: none;
@@ -269,9 +266,9 @@ body.page .ko-about-section {
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* Apply only fade-in effect to the image container with fade-in-up */
+/* Apply levitation effect specifically to the image container with fade-in-up */
 .ko-about-image-container.ko-fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 0.6s ease-out forwards, visibleLevitation 4s ease-in-out 0.8s infinite;
     animation-fill-mode: both;
 }
 
@@ -698,114 +695,6 @@ body.page .ko-about-section {
     transform: translateY(-3px);
 }
 
-/* Wavy Separator for About the Sports Cafe Section */
-.ko-wavy-separator {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    margin-top: 2rem;
-    height: 60px;
-    background: transparent;
-    /* Ensure proper rendering on mobile */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-.editorial {
-    display: block;
-    width: 100%;
-    height: 60px;
-    max-height: 60px;
-    margin: 0;
-    z-index: 5;
-    bottom: 0;
-    position: absolute;
-    left: 0px;
-    float: left;
-    /* Ensure proper rendering on mobile */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-.parallax1 > use {
-    animation: move-forever1 10s linear infinite;
-}
-.parallax1 > use:nth-child(1) {
-    animation-delay: -2s;
-}
-
-.parallax2 > use {
-    animation: move-forever2 8s linear infinite;
-}
-.parallax2 > use:nth-child(1) {
-    animation-delay: -2s;
-}
-
-.parallax3 > use {
-    animation: move-forever3 6s linear infinite;
-}
-.parallax3 > use:nth-child(1) {
-    animation-delay: -2s;
-}
-
-.parallax4 > use {
-    animation: move-forever4 4s linear infinite;
-}
-.parallax4 > use:nth-child(1) {
-    animation-delay: -2s;
-}
-
-@keyframes move-forever1 {
-    0% {
-        transform: translate(85px, 0%);
-    }
-    100% {
-        transform: translate(-90px, 0%);
-    }
-}
-
-@keyframes move-forever2 {
-    0% {
-        transform: translate(-90px, 0%);
-    }
-    100% {
-        transform: translate(85px, 0%);
-    }
-}
-
-@keyframes move-forever3 {
-    0% {
-        transform: translate(85px, 0%);
-    }
-    100% {
-        transform: translate(-90px, 0%);
-    }
-}
-
-@keyframes move-forever4 {
-    0% {
-        transform: translate(-90px, 0%);
-    }
-    100% {
-        transform: translate(85px, 0%);
-    }
-}
-
-/* Responsive heights for different screen sizes */
-@media (min-width: 768px) {
-    .editorial {
-        height: 80px;
-        max-height: 80px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .editorial {
-        height: 100px;
-        max-height: 100px;
-    }
-}
 
 /* About the Sports Cafe specific layout - Modern Mobile First Design */
 .ko-about-cafe .ko-about-wrapper {
@@ -817,11 +706,6 @@ body.page .ko-about-section {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
-    /* Force hardware acceleration for mobile */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 /* Mobile Order: 1. Header, 2. Image, 3. Content */
@@ -830,9 +714,6 @@ body.page .ko-about-section {
     width: 100%;
     max-width: 800px;
     margin-bottom: 1rem;
-    /* Ensure visibility on mobile */
-    position: relative;
-    z-index: 10;
 }
 
 .ko-about-cafe .ko-about-image-container {
@@ -840,18 +721,12 @@ body.page .ko-about-section {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    /* Ensure visibility on mobile */
-    position: relative;
-    z-index: 10;
 }
 
 .ko-about-cafe .ko-about-text {
     order: 3;
     width: 100%;
     max-width: 700px;
-    /* Ensure visibility on mobile */
-    position: relative;
-    z-index: 10;
 }
 
 /* Enhanced header styling */
@@ -914,9 +789,6 @@ body.page .ko-about-section {
         text-align: left;
         padding: 0 2rem;
         max-width: 1600px;
-        /* Ensure grid works on all devices */
-        -webkit-display: grid;
-        -ms-display: grid;
     }
     
     /* Left column: Header and text content */
@@ -927,9 +799,6 @@ body.page .ko-about-section {
         margin-bottom: 2rem;
         width: 100%;
         max-width: none;
-        /* Ensure visibility on mobile */
-        position: relative;
-        z-index: 10;
     }
     
     .ko-about-cafe .ko-about-text {
@@ -939,9 +808,6 @@ body.page .ko-about-section {
         align-self: start;
         width: 100%;
         max-width: none;
-        /* Ensure visibility on mobile */
-        position: relative;
-        z-index: 10;
     }
     
     /* Right column: Image container spanning both rows */
@@ -955,9 +821,6 @@ body.page .ko-about-section {
         max-width: 600px;
         position: sticky;
         top: 2rem;
-        /* Ensure visibility on mobile */
-        position: relative;
-        z-index: 10;
     }
     
     /* Desktop: Align header underline to left */
@@ -1532,47 +1395,6 @@ body.page .ko-about-section {
     .ko-container {
         padding: 0 1rem;
     }
-    
-    /* Mobile-specific fixes for OPPO and other devices - Consolidated */
-    .ko-about-cafe .ko-about-wrapper {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 2rem !important;
-    }
-    
-    .ko-about-cafe .ko-about-header,
-    .ko-about-cafe .ko-about-image-container,
-    .ko-about-cafe .ko-about-text {
-        position: relative !important;
-        z-index: 10 !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-    }
-    
-    /* Force hardware acceleration on mobile */
-    .ko-about-section {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-    
-    /* Prevent JavaScript interference on mobile */
-    .ko-about-cafe .ko-about-wrapper * {
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-    }
-    
-    /* Ensure video elements are always visible on mobile */
-    .ko-about-video {
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-        position: relative !important;
-        z-index: 10 !important;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1591,35 +1413,82 @@ body.page .ko-about-section {
     .ko-feature-card {
         padding: 2rem 1.5rem;
     }
-    
-    /* Extra small screen fixes */
-    .ko-about-cafe .ko-about-wrapper {
-        gap: 1.5rem !important;
-        padding: 0 0.5rem !important;
-    }
-    
-    .ko-about-cafe .ko-about-header h2 {
-        font-size: 1.75rem !important;
-        margin-bottom: 0.75rem !important;
-    }
-    
-    .ko-about-cafe .ko-about-image-container {
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-    
-    .ko-about-cafe .ko-about-text {
-        max-width: 100% !important;
-    }
 }
 
-/* Container */
+/* Our Partners Container */
 .ko-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
     z-index: 2;
+}
+
+
+/* -------------------------------------------------
+   About - Wavy Separator (Ocean Waves) Animation
+   - Replaces default separator with multi-layer parallax waves
+   - Scoped to About sections only
+   ------------------------------------------------- */
+.ko-about-section .ko-wavy-separator {
+    position: relative;
+    width: 100%;
+    line-height: 0; /* Remove whitespace gap */
+    overflow: hidden; /* Hide overflow from wave drift */
+}
+
+/* SVG container for the waves */
+.ko-about-section .ko-wavy-separator .editorial {
+    display: block;
+    width: 100%;
+    height: 60px;
+    max-height: 60px;
+    margin: 0;
+    position: relative; /* Keep inside normal flow */
+    left: 0;
+    z-index: 1;
+}
+
+/* Animate individual wave layers for subtle parallax drift */
+.ko-about-section .ko-wavy-separator .parallax1 > use {
+    animation: ko-move-forever-1 10s linear infinite;
+    animation-delay: -2s;
+}
+
+.ko-about-section .ko-wavy-separator .parallax2 > use {
+    animation: ko-move-forever-2 8s linear infinite;
+    animation-delay: -2s;
+}
+
+.ko-about-section .ko-wavy-separator .parallax3 > use {
+    animation: ko-move-forever-3 6s linear infinite;
+    animation-delay: -2s;
+}
+
+.ko-about-section .ko-wavy-separator .parallax4 > use {
+    animation: ko-move-forever-4 4s linear infinite;
+    animation-delay: -2s;
+}
+
+/* Keyframes: horizontal drifting motion to simulate ocean waves */
+@keyframes ko-move-forever-1 {
+    0% { transform: translate(85px, 0%); }
+    100% { transform: translate(-90px, 0%); }
+}
+
+@keyframes ko-move-forever-2 {
+    0% { transform: translate(-90px, 0%); }
+    100% { transform: translate(85px, 0%); }
+}
+
+@keyframes ko-move-forever-3 {
+    0% { transform: translate(85px, 0%); }
+    100% { transform: translate(-90px, 0%); }
+}
+
+@keyframes ko-move-forever-4 {
+    0% { transform: translate(-90px, 0%); }
+    100% { transform: translate(85px, 0%); }
 }
 
 /* Text Utilities */
@@ -1794,11 +1663,13 @@ body.page .ko-about-section {
     height: auto;
     display: block;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(176, 209, 54, 0.2);
     transition: all 0.3s ease;
-    border: none;
-    backdrop-filter: none;
-    background: transparent;
+    border: 2px solid rgba(176, 209, 54, 0.3);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
     object-fit: contain;
     min-height: 280px;
     max-height: 350px;
@@ -1814,32 +1685,34 @@ body.page .ko-about-section {
     max-height: 400px;
 }
 
-/* Prevent JavaScript interference - Force visibility */
-.ko-about-image-container {
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-    position: relative !important;
-    z-index: 10 !important;
-}
-
 .ko-about-video:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(176, 209, 54, 0.4);
+    border-color: var(--ko-accent-green);
 }
 
 /* Enhanced video container styling */
 .ko-about-image-container:has(.ko-about-video) {
-    background: transparent;
-    backdrop-filter: none;
-    border: none;
-    padding: 0;
+    background: linear-gradient(145deg, 
+        rgba(176, 209, 54, 0.1) 0%, 
+        rgba(0, 212, 255, 0.1) 50%, 
+        rgba(176, 209, 54, 0.1) 100%);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(176, 209, 54, 0.3);
+    padding: 1rem;
 }
 
 .ko-about-image-container:has(.ko-about-video):hover {
-    background: transparent;
-    border: none;
-    box-shadow: none;
+    background: linear-gradient(145deg, 
+        rgba(176, 209, 54, 0.2) 0%, 
+        rgba(0, 212, 255, 0.2) 50%, 
+        rgba(176, 209, 54, 0.2) 100%);
+    border-color: var(--ko-accent-green);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(176, 209, 54, 0.3);
 }
 
 /* Video specific mobile optimizations */
@@ -1847,28 +1720,10 @@ body.page .ko-about-section {
     .ko-about-video {
         min-height: 250px;
         border-radius: 12px;
-        /* Ensure video is visible on mobile */
-        position: relative;
-        z-index: 10;
     }
     
     .ko-about-image-container:has(.ko-about-video) {
         padding: 0.75rem;
-        /* Ensure container is visible on mobile */
-        position: relative;
-        z-index: 10;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-    }
-    
-    /* Fallback for devices that don't support :has() */
-    .ko-about-image-container {
-        position: relative;
-        z-index: 10;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
     }
 }
 
@@ -1880,87 +1735,6 @@ body.page .ko-about-section {
     
     .ko-about-image-container:has(.ko-about-video) {
         padding: 0.5rem;
-    }
-}
-
-/* Mobile-specific fixes for OPPO and other devices - Consolidated */
-@media (max-width: 768px) {
-    .ko-about-cafe .ko-about-wrapper {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 2rem !important;
-    }
-    
-    .ko-about-cafe .ko-about-header,
-    .ko-about-cafe .ko-about-image-container,
-    .ko-about-cafe .ko-about-text {
-        position: relative !important;
-        z-index: 10 !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-    }
-    
-    /* Force hardware acceleration on mobile */
-    .ko-about-section {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-    
-    /* Prevent JavaScript interference on mobile */
-    .ko-about-cafe .ko-about-wrapper * {
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-    }
-    
-    /* Ensure video elements are always visible on mobile */
-    .ko-about-video {
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: block !important;
-        position: relative !important;
-        z-index: 10 !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .ko-about-hero {
-        padding: 60px 0 40px;
-    }
-
-    .ko-about-hero h1 {
-        font-size: 2rem;
-    }
-
-    .ko-team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ko-feature-card {
-        padding: 2rem 1.5rem;
-    }
-    
-    /* Extra small screen fixes */
-    .ko-about-cafe .ko-about-wrapper {
-        gap: 1.5rem !important;
-        padding: 0 0.5rem !important;
-    }
-    
-    .ko-about-cafe .ko-about-header h2 {
-        font-size: 1.75rem !important;
-        margin-bottom: 0.75rem !important;
-    }
-    
-    .ko-about-cafe .ko-about-image-container {
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-    
-    .ko-about-cafe .ko-about-text {
-        max-width: 100% !important;
     }
 }
 

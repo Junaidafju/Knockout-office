@@ -14,7 +14,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="icon" href="https://res.cloudinary.com/dcvn7lbh6/image/upload/v1755928992/knockout-web-icon_zsajfv.png" type="image/svg+xml">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/knockout-web-icon.png" type="image/x-icon">
 
     <?php wp_head(); ?>
     <!-- Lottie Animation Script -->

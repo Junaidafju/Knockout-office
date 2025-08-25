@@ -5,25 +5,51 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Intersection Observer for section animations
+    // Intersection Observer for section animations with robust fallbacks
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const sectionObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                sectionObserver.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+    const revealAllSections = () => {
+        try {
+            const allWrappers = document.querySelectorAll('.section-wrapper');
+            allWrappers.forEach(el => el.classList.add('animate-in'));
+        } catch (e) {}
+    };
 
-    // Observe all section wrappers
     const sectionWrappers = document.querySelectorAll('.section-wrapper');
-    sectionWrappers.forEach(section => {
-        sectionObserver.observe(section);
+    let sectionObserver = null;
+
+    if ('IntersectionObserver' in window) {
+        sectionObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sectionWrappers.forEach(section => {
+            sectionObserver.observe(section);
+        });
+    } else {
+        // Fallback for environments/devices without IntersectionObserver
+        revealAllSections();
+    }
+
+    // Safety net: if sections are still hidden shortly after load, reveal them
+    setTimeout(() => {
+        const anyHidden = Array.from(sectionWrappers).some(el => !el.classList.contains('animate-in'));
+        if (anyHidden) revealAllSections();
+    }, 2500);
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const anyHidden = Array.from(sectionWrappers).some(el => !el.classList.contains('animate-in'));
+            if (anyHidden) revealAllSections();
+        }, 1000);
     });
 
     // Lazy loading for images

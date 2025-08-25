@@ -1,0 +1,42 @@
+/* Mobile Hero Styles */
+
+@media (max-width: 768px) {
+	.hero-section {
+		min-height: calc(100vh - 64px);
+		padding-top: 64px; /* offset header */
+		overflow: hidden;
+	}
+
+	.hero-content {
+		text-align: center;
+		padding: 0 16px;
+	}
+
+	.hero-title {
+		font-size: 2.4rem;
+		letter-spacing: 1px;
+		line-height: 1.05;
+	}
+
+	/* Ensure background covers and overlays match desktop layering */
+	.hero-background,
+	.hero-bg-video,
+	.hero-bg-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.hero-title .title-line-1 { color: #fff; }
+	.hero-title .title-line-2 { color: #b0d136; }
+
+	.hero-buttons {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 12px;
+	}
+}

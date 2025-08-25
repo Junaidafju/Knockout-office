@@ -10,7 +10,6 @@
 <section class="ko-about-section ko-about-content ko-about-cafe">
     <div class="ko-container">
         <div class="ko-about-wrapper">
-            
             <!-- Header - appears first on mobile -->
             <div class="ko-about-header ko-fade-in-up">
                 <h2>About <span>KnockOut</span></h2>
@@ -19,7 +18,7 @@
             <!-- Image/Video - appears second on mobile -->
             <div class="ko-about-image-container ko-fade-in-up ko-delay-1">
                 <video class="ko-about-video" autoplay muted loop playsinline>
-                    <source src="https://res.cloudinary.com/dcvn7lbh6/video/upload/v1755953017/Purple_3D_Modern_Cyber_Security_Mobile_Video_4_bt5akd.mp4" type="video/mp4">
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/images/about-knockout.mp4" type="video/mp4">
                     <!-- Fallback image if video doesn't load -->
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/About-Us.svg" alt="About KnockOut" class="ko-about-image">
                 </video>
@@ -63,33 +62,28 @@
             </div>
         </div>
     </div>
-        <!-- Wavy Line Separator -->
+    <!-- Wavy Line Separator -->
     <div class="ko-wavy-separator">
-        <svg class="editorial"
-             xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink"
-             viewBox="0 24 150 28"
-             preserveAspectRatio="none">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
             <defs>
-                <path id="gentle-wave"
-                       d="M-160 44c30 0 
-                          58-18 88-18s
-                          58 18 88 18 
-                          58-18 88-18 
-                          58 18 88 18
-                          v44h-352z" />
+                <path id="gentle-wave" d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
             </defs>
             <g class="parallax1">
-                <use xlink:href="#gentle-wave" x="50" y="3" opacity=".25" fill="#b0d136"/>
+                <use xlink:href="#gentle-wave" x="50" y="3" fill="#b0d136" />
             </g>
             <g class="parallax2">
-                <use xlink:href="#gentle-wave" x="50" y="0" opacity=".5" fill="#b0d136"/>
+                <use xlink:href="#gentle-wave" x="50" y="0" opacity="0.25" fill="#b0d136" />
             </g>
             <g class="parallax3">
-                <use xlink:href="#gentle-wave" x="50" y="9" fill="#b0d136"/>
+                <use xlink:href="#gentle-wave" x="50" y="9" opacity="0.1" fill="#b0d136" />
             </g>
             <g class="parallax4">
-                <use xlink:href="#gentle-wave" x="50" y="6" fill="#000000"/>
+                <use xlink:href="#gentle-wave" x="50" y="6" fill="#000000" />
             </g>
         </svg>
     </div>

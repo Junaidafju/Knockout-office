@@ -39,15 +39,80 @@ body {
     padding: 0 20px;
 }
 
-/* Header Styles */
+/* Header Styles - Enhanced Fixed Positioning */
 .site-header {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
     padding: 0.5rem 0;
     min-height: 80px;
+    transition: all 0.3s ease;
+}
+
+/* -------------------------------------------------
+   Wavy Separator - Ocean Wave Animation
+   ------------------------------------------------- */
+.ko-wavy-separator {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.ko-wavy-separator svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.ko-wavy-separator svg path {
+    will-change: transform;
+    transform-origin: 50% 100%;
+}
+
+/* Layered, offset wave drift for parallax effect */
+.ko-wavy-separator svg path:nth-child(1) {
+    animation: koWaveDrift1 12s ease-in-out infinite;
+}
+
+.ko-wavy-separator svg path:nth-child(2) {
+    animation: koWaveDrift2 10s ease-in-out infinite;
+}
+
+.ko-wavy-separator svg path:nth-child(3) {
+    animation: koWaveDrift3 8s ease-in-out infinite;
+}
+
+@keyframes koWaveDrift1 {
+    0%   { transform: translateX(0) translateY(0); }
+    25%  { transform: translateX(-20px) translateY(4px); }
+    50%  { transform: translateX(-40px) translateY(8px); }
+    75%  { transform: translateX(-20px) translateY(4px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes koWaveDrift2 {
+    0%   { transform: translateX(0) translateY(0); }
+    25%  { transform: translateX(-15px) translateY(3px); }
+    50%  { transform: translateX(-30px) translateY(6px); }
+    75%  { transform: translateX(-15px) translateY(3px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes koWaveDrift3 {
+    0%   { transform: translateX(0) translateY(0); }
+    25%  { transform: translateX(-25px) translateY(5px); }
+    50%  { transform: translateX(-50px) translateY(10px); }
+    75%  { transform: translateX(-25px) translateY(5px); }
+    100% { transform: translateX(0) translateY(0); }
 }
 
 /* Mobile header optimization */
@@ -321,47 +386,91 @@ body {
     transition: 0.3s;
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation - Enhanced Fixed Positioning */
 .mobile-navigation {
     display: none;
-    background: rgba(0, 0, 0, 0.95) !important;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    position: fixed !important;
-    top: var(--ko-header-height, 60px) !important;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    z-index: 2147483647 !important; /* ensure above all layers */
-    border-top: 2px solid #b0d136;
-    height: calc(100vh - var(--ko-header-height, 60px)) !important;
-    overflow-y: auto !important;
+    width: 100%;
+    max-height: calc(100vh - 80px);
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9998;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateY(-100%);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.mobile-navigation.active {
+    display: block;
+    transform: translateY(0);
 }
 
 .mobile-navigation ul {
     list-style: none;
     margin: 0;
-    padding: 1rem 0;
+    padding: 2rem 0;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 0.1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .mobile-navigation li {
     text-align: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(176, 209, 54, 0.2);
+}
+
+.mobile-navigation li:last-child {
+    border-bottom: none;
 }
 
 .mobile-navigation a {
     display: block;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     text-decoration: none;
-    color: #2c3e50;
+    color: #ffffff;
     font-weight: 600;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-navigation a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(176, 209, 54, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.mobile-navigation a:hover::before {
+    left: 100%;
 }
 
 .mobile-navigation a:hover {
-    background-color: #f8f9fa;
+    background: rgba(176, 209, 54, 0.15);
     color: #b0d136;
+    transform: translateX(10px);
 }
 
 /* Main Content */
@@ -786,7 +895,7 @@ body {
 /* Ensure consistent positioning across all cards */
 .events-section .instructor-name {
     color: #FFD700;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -815,36 +924,36 @@ body {
 }
 
 
-    .events-section .event-description {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.8rem;
-        line-height: 1.4;
-        margin: 0 0 15px 0;
-        max-width: 65%;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        flex-grow: 1;
-    }
+.events-section .event-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+    max-width: 65%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
 
-    .events-section .event-details-btn {
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        width: fit-content;
-        margin: 0;
-        flex-grow: 0;
-    }
+.events-section .event-details-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 0;
+    flex-grow: 0;
+}
 
 .events-section .event-details-btn:hover {
     background: rgba(255, 215, 0, 0.1);
@@ -855,7 +964,7 @@ body {
 
 .instructor-name {
     color: #FFD700;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -917,7 +1026,7 @@ body {
 
 .event-description {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.4;
     margin-bottom: 20px;
     max-width: 65%;
@@ -1222,7 +1331,7 @@ body {
     }
 
     .events-section .section-subtitle {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .events-carousel-wrapper {
@@ -1611,7 +1720,7 @@ body {
 }
 
 .gallery-content p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
     opacity: 0.9;
 }
@@ -1868,7 +1977,7 @@ body {
     background: #1a1a1a;
     color: #fff;
     padding: 3rem 0 1.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.6;
 }
 
@@ -2183,7 +2292,7 @@ ront Page Specific Styles */
 }
 
 .scroll-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -2370,7 +2479,7 @@ ront Page Specific Styles */
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -2418,7 +2527,7 @@ ront Page Specific Styles */
 
 .share-url label {
     color: #b0d136;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     display: block;
     margin-bottom: 0.5rem;
@@ -2613,7 +2722,7 @@ ront Page Specific Styles */
 }
 
 .scroll-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #b0d136;
@@ -3019,7 +3128,7 @@ ront Page Specific Styles */
     }
 
     .btn-icon {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -3047,19 +3156,14 @@ ront Page Specific Styles */
 /* Mobile Navigation */
 .mobile-navigation {
     display: none;
-    background: rgba(0, 0, 0, 0.95) !important;
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 9999 !important;
+    z-index: 15;
     border-top: 2px solid #b0d136;
-    /* Ensure mobile navigation is always on top */
-    position: fixed !important;
-    top: var(--ko-header-height, 60px) !important;
-    height: calc(100vh - var(--ko-header-height, 60px)) !important;
-    overflow-y: auto !important;
 }
 
 .mobile-navigation ul {
@@ -3077,17 +3181,16 @@ ront Page Specific Styles */
     display: block;
     padding: 1rem;
     text-decoration: none;
-    color: white !important;
+    color: white;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    font-size: 1rem !important;
 }
 
 .mobile-navigation a:hover {
     background-color: rgba(176, 209, 54, 0.1);
-    color: #b0d136 !important;
+    color: #b0d136;
 }
 
 /* FIXED: Mobile hamburger menu positioning */
@@ -3766,7 +3869,7 @@ button:focus {
     border-radius: 30px;
     color: #6c757d;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase;
@@ -4037,7 +4140,7 @@ button:focus {
 
 .calories-info::before {
     content: "🔥";
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .menu-item-price {
@@ -5032,7 +5135,7 @@ button:focus {
 
 .desktop-category-name {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #ffffff;
     transition: color 0.3s ease;
@@ -5642,7 +5745,7 @@ button:focus {
 
 .footer-copyright {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .footer-copyright p {
@@ -5758,7 +5861,7 @@ button:focus {
     }
 
     .footer-navigation a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -5789,7 +5892,7 @@ button:focus {
         max-width: calc(100vw - 60px) !important;
         min-width: auto !important;
         padding: 0.8rem 1.5rem !important;
-        font-size: 0.8rem !important;
+        font-size: 0.9rem !important;
         letter-spacing: 0.5px !important;
         white-space: nowrap !important;
         overflow: hidden !important;
@@ -5845,8 +5948,8 @@ button:focus {
     }
     
     .section-wrapper {
-        padding-left: 0.8rem !important;
-        padding-right: 0.8rem !important;
+        padding-left: 0.1rem !important;
+        padding-right: 0.1rem !important;
     }
 }
 
@@ -5952,76 +6055,157 @@ button:focus {
     }
 }
 
-/* FIXED: Mobile navigation and overflow issues */
+/* COMPREHENSIVE MOBILE NAVIGATION FIX */
 @media (max-width: 768px) {
-  /* Fixed mobile navigation */
-  .mobile-navigation {
+  /* CRITICAL: Prevent horizontal overflow globally */
+  html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Lock body scrolling when mobile menu is open */
+  body.mobile-menu-open {
+    overflow: hidden !important;
     position: fixed !important;
-    top: var(--ko-header-height, 60px) !important; /* Adjust based on header height */
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95) !important;
-    backdrop-filter: blur(10px);
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  
+  /* Fixed header positioning */
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
     z-index: 9999 !important;
-    display: none;
-    overflow-y: auto;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    border-top: 2px solid #b0d136;
-    height: calc(100vh - var(--ko-header-height, 60px)) !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Header container */
+  .site-header .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+  
+  /* Header content */
+  .header-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 60px !important;
+  }
+  
+  /* Mobile menu toggle positioning */
+  .mobile-menu-toggle {
+    position: absolute !important;
+    left: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1000 !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Mobile navigation - positioned absolutely below header */
+  .mobile-navigation {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    background: rgba(0, 0, 0, 0.98) !important;
+    backdrop-filter: blur(15px) !important;
+    z-index: 999 !important;
+    display: none !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    max-height: calc(100vh - 60px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    border-top: 2px solid #b0d136 !important;
+    box-sizing: border-box !important;
   }
   
   .mobile-navigation.active {
     display: block !important;
   }
   
-  .mobile-menu-toggle {
-    z-index: 10000 !important;
-    position: absolute;
-  }
-  
-  /* Prevent body scroll when mobile menu is open */
-  html.mobile-menu-open,
-  body.mobile-menu-open {
-    overflow: hidden !important;
-    height: 100vh !important;
-  }
-
-  /* Keep header on top while menu is open */
-  .site-header.header-fixed {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2147483647; /* higher than menu */
-  }
-  
-  /* CRITICAL: Fix mobile overflow issues */
-  html, body {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
+  /* Mobile navigation menu items */
+  .mobile-navigation ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    width: 100% !important;
     box-sizing: border-box !important;
   }
   
-  .site-header {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-    box-sizing: border-box !important;
+  .mobile-navigation li {
+    text-align: center !important;
+    border-bottom: 1px solid rgba(176, 209, 54, 0.2) !important;
     width: 100% !important;
   }
   
-  .container {
-    max-width: 100% !important;
-    padding: 0 15px !important;
-    margin: 0 auto !important;
+  .mobile-navigation li:last-child {
+    border-bottom: none !important;
+  }
+  
+  .mobile-navigation a {
+    display: block !important;
+    padding: 1rem 2rem !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
     box-sizing: border-box !important;
   }
   
-  /* Fix header content overflow */
-  .header-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
+  .mobile-navigation a:hover {
+    background: rgba(176, 209, 54, 0.15) !important;
+    color: #b0d136 !important;
+  }
+  
+  /* Ensure main content starts after fixed header */
+  .site-content {
+    margin-top: 60px !important;
+  }
+  
+  /* Hide desktop navigation on mobile */
+  .left-navigation,
+  .right-navigation {
+    display: none !important;
   }
 }
-

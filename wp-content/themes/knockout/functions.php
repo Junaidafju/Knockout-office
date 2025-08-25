@@ -133,9 +133,6 @@ function knockout_scripts() {
     // Enqueue about page styles - load on all pages to ensure availability
     wp_enqueue_style('knockout-about', get_template_directory_uri() . '/assets/css/about.css', array('knockout-style', 'knockout-neon-theme'), '1.0.5');
     
-    // Enqueue about animations script - load on all pages to ensure availability
-    wp_enqueue_script('knockout-about-animations', get_template_directory_uri() . '/js/about-animations.js', array(), '1.0.1', true);
-    
     // Enqueue front page script for homepage interactions
     if (is_front_page()) {
         wp_enqueue_script('knockout-front-page', get_template_directory_uri() . '/js/front-page.js', array(), '1.0.0', true);
@@ -274,6 +271,7 @@ function knockout_fallback_right_menu() {
    echo '<ul>';
    echo '<li><a href="' . esc_url(home_url('/#gallery')) . '">Gallery</a></li>';
    echo '<li><a href="' . esc_url(home_url('/#contact')) . '">Contact</a></li>';
+   echo '<li><a href="' . esc_url(home_url('/blogs/')) . '">Blogs</a></li>';
    echo '</ul>';
 }
 
@@ -285,6 +283,7 @@ function knockout_fallback_mobile_menu() {
    echo '<li><a href="' . esc_url(home_url('/#events')) . '">Events</a></li>';
    echo '<li><a href="' . esc_url(home_url('/#gallery')) . '">Gallery</a></li>';
    echo '<li><a href="' . esc_url(home_url('/#contact')) . '">Contact</a></li>';
+   echo '<li><a href="' . esc_url(home_url('/blogs/')) . '">Blogs</a></li>';
    echo '</ul>';
 }
 
