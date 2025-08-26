@@ -204,7 +204,7 @@ body.page .ko-about-section {
 
 /* Content Sections */
 .ko-about-content {
-    padding: 80px 0;
+    padding: 50px 0;
     background: linear-gradient(135deg, var(--ko-bg-dark) 0%, #111111 100%);
     position: relative;
 }
@@ -1524,42 +1524,6 @@ body.page .ko-about-section {
 
 .ko-d-block {
     display: block;
-}
-
-/* Partners Section */
-.ko-partners {
-    background: linear-gradient(to bottom, var(--ko-bg-dark) 0%, #111111 100%);
-    padding: 4rem 0;
-    border-top: 1px solid var(--ko-accent-green);
-}
-
-.ko-partners-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.ko-partner-logo {
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.ko-partner-logo:hover {
-    opacity: 1;
-}
-
-.ko-partner-img {
-    max-width: 120px;
-    height: auto;
-    filter: grayscale(100%) brightness(2);
-    transition: filter 0.3s ease;
-}
-
-.ko-partner-logo:hover .ko-partner-img {
-    filter: none;
 }
 
 /* Animation */

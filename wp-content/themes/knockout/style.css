@@ -55,65 +55,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* -------------------------------------------------
-   Wavy Separator - Ocean Wave Animation
-   ------------------------------------------------- */
-.ko-wavy-separator {
-    position: relative;
-    width: 100%;
-    line-height: 0;
-    overflow: hidden;
-}
 
-.ko-wavy-separator svg {
-    display: block;
-    width: 100%;
-    height: 80px;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-}
-
-.ko-wavy-separator svg path {
-    will-change: transform;
-    transform-origin: 50% 100%;
-}
-
-/* Layered, offset wave drift for parallax effect */
-.ko-wavy-separator svg path:nth-child(1) {
-    animation: koWaveDrift1 12s ease-in-out infinite;
-}
-
-.ko-wavy-separator svg path:nth-child(2) {
-    animation: koWaveDrift2 10s ease-in-out infinite;
-}
-
-.ko-wavy-separator svg path:nth-child(3) {
-    animation: koWaveDrift3 8s ease-in-out infinite;
-}
-
-@keyframes koWaveDrift1 {
-    0%   { transform: translateX(0) translateY(0); }
-    25%  { transform: translateX(-20px) translateY(4px); }
-    50%  { transform: translateX(-40px) translateY(8px); }
-    75%  { transform: translateX(-20px) translateY(4px); }
-    100% { transform: translateX(0) translateY(0); }
-}
-
-@keyframes koWaveDrift2 {
-    0%   { transform: translateX(0) translateY(0); }
-    25%  { transform: translateX(-15px) translateY(3px); }
-    50%  { transform: translateX(-30px) translateY(6px); }
-    75%  { transform: translateX(-15px) translateY(3px); }
-    100% { transform: translateX(0) translateY(0); }
-}
-
-@keyframes koWaveDrift3 {
-    0%   { transform: translateX(0) translateY(0); }
-    25%  { transform: translateX(-25px) translateY(5px); }
-    50%  { transform: translateX(-50px) translateY(10px); }
-    75%  { transform: translateX(-25px) translateY(5px); }
-    100% { transform: translateX(0) translateY(0); }
-}
 
 /* Mobile header optimization */
 @media (max-width: 768px) {
@@ -480,7 +422,7 @@ body {
 
 /* Section Styling */
 .section-wrapper {
-    padding: 5rem 0;
+    padding: 1rem 0;
     position: relative;
 }
 
@@ -3449,12 +3391,12 @@ anced Responsive Design */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #FFD700, #FFA500);
+    background: linear-gradient(45deg, #d9ff00, #9dff00);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #FFA500, #FFD700);
+    background: linear-gradient(45deg, #fbff00, #91ff00);
 }
 
 /* Selection Styling */

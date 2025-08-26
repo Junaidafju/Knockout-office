@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Popsies";
+    src: url("https://db.onlinewebfonts.com/t/8ca14f5be5676d15ae6ef15c4c18a49b.eot");
+    src: url("https://db.onlinewebfonts.com/t/8ca14f5be5676d15ae6ef15c4c18a49b.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8ca14f5be5676d15ae6ef15c4c18a49b.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8ca14f5be5676d15ae6ef15c4c18a49b.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/8ca14f5be5676d15ae6ef15c4c18a49b.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8ca14f5be5676d15ae6ef15c4c18a49b.svg#Popsies")format("svg");
+}
 /* Services Section Styles */
 .services-section {
     padding: 80px 0;
@@ -5,6 +14,79 @@
     color: #fff;
     position: relative;
     overflow: hidden;
+}
+
+/*SHAPE DIVIDER AFTER SERVICES SECTION*/
+.custom-shape-divider-top-1756199697 {
+    position: relative; /* ✅ relative so text can be placed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  
+  .custom-shape-divider-top-1756199697 svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+  }
+  
+  .custom-shape-divider-top-1756199697 .shape-fill {
+    fill: #7ED321;
+  }
+  
+  .divider-text {
+    position: absolute;
+    top: 115px; /*adjust this so text sits just under the SVG */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 130px;
+    font-weight: 400;
+    font-family: "Popsies";
+    color: #a6d321;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    opacity: 0.5; /*ensure text is fully visible */
+    z-index: 2; /* ✅ ensures text is above SVG */
+    white-space: nowrap;
+  }
+  
+
+/* Mobile: keep divider from occupying layout space and shrink height */
+@media (max-width: 768px) {
+    .services-section {
+        position: relative; /* ensure absolute children anchor to section */
+    }
+    .custom-shape-divider-top-1756199697 {
+        position: absolute; /* remove from normal flow so no extra height */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px; /* reserve enough space for text */
+    }
+    .custom-shape-divider-top-1756199697 svg {
+        height: 56px; /* smaller height on mobile */
+    }
+    .custom-shape-divider-top-1756199697 {
+        top: 48px; /* show just under SVG */
+        font-size: 36px;
+        letter-spacing: 1px;
+        opacity: 0.12;
+        z-index: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-shape-divider-top-1756199697 {
+        height: 80px;
+    }
+    .custom-shape-divider-top-1756199697 svg {
+        height: 44px;
+    }
+    .custom-shape-divider-top-1756199697 {
+        top: 38px;
+        font-size: 28px;
+    }
 }
 
 .services-section .container {
@@ -812,7 +894,7 @@
 
 @media (max-width: 480px) {
     .services-section {
-        padding: 40px 0;
+        padding:5px 0;
     }
     
     .services-section .container {

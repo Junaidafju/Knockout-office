@@ -224,29 +224,31 @@
             </div>
         </div>
     </div>
-</section>
-
-<!-- Partners Section -->
-<section class="ko-partners">
-    <div class="ko-container">
-        <div class="ko-section-header ko-fade-in-up">
-            <h2>Our <span>Partners</span></h2>
-            <p>Trusted by leading brands in the industry</p>
-        </div>
-        
-        <div class="ko-partners-grid">
-            <div class="ko-partner-logo ko-fade-in-up ko-delay-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-1.png" alt="Partner Logo" class="ko-partner-img">
-            </div>
-            <div class="ko-partner-logo ko-fade-in-up ko-delay-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-2.png" alt="Partner Logo" class="ko-partner-img">
-            </div>
-            <div class="ko-partner-logo ko-fade-in-up ko-delay-3">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-3.png" alt="Partner Logo" class="ko-partner-img">
-            </div>
-            <div class="ko-partner-logo ko-fade-in-up ko-delay-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-4.png" alt="Partner Logo" class="ko-partner-img">
-            </div>
-        </div>
+    <!-- Animated Separator below CEO Section -->
+<div class="ko-wavy-separator">
+    <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+        </defs>
+        <g class="parallax1">
+            <use xlink:href="#gentle-wave" x="50" y="3" fill="#b0d136" />
+        </g>
+        <g class="parallax2">
+            <use xlink:href="#gentle-wave" x="50" y="0" opacity="0.25" fill="#b0d136" />
+        </g>
+        <g class="parallax3">
+            <use xlink:href="#gentle-wave" x="50" y="9" opacity="0.1" fill="#b0d136" />
+        </g>
+        <g class="parallax4">
+            <use xlink:href="#gentle-wave" x="50" y="1" fill="#000000" />
+        </g>
+    </svg>
     </div>
 </section>
+
+ 

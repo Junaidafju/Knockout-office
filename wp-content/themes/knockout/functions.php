@@ -93,8 +93,13 @@ function knockout_scripts() {
     // Enqueue fluid responsive menu CSS
     wp_enqueue_style('knockout-fluid-menu', get_template_directory_uri() . '/assets/css/fluid-responsive-menu.css', array('knockout-style'), '1.0.0');
     
-    // Enqueue Google Fonts for futuristic look
-    wp_enqueue_style('knockout-fonts', 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;600&display=swap', array(), '1.0.0');
+    // Enqueue Google Fonts (Orbitron, Roboto, Dancing Script)
+    wp_enqueue_style(
+        'knockout-fonts',
+        'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;600&display=swap',
+        array(),
+        '1.0.1'
+    );
     
     // Enqueue Font Awesome for icons - Updated to latest version with fallback
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1');
