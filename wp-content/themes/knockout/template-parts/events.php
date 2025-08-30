@@ -151,7 +151,7 @@
                 <h3>Ready to Join Our Events?</h3>
                 <p>Don't miss out on these amazing learning opportunities!</p>
                 <div class="cta-buttons">
-                    <button class="register-now-btn btn btn-primary" onclick="window.location.href='#contact'">Register Now</button>
+                    <button class="register-now-btn btn btn-primary" onclick="window.location.href='/contact/'">Register Now</button>
                 </div>
             </div>
         </div>

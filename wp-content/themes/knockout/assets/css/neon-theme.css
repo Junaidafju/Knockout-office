@@ -438,7 +438,7 @@ body::before {
 }
 
 .events-section .container {
-    max-width: 1200px;
+    max-width: 1200px !important;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
@@ -889,71 +889,6 @@ body::before {
     }
 }
 
-/* Gallery Section - Holographic Display */
-.gallery-section {
-    background: var(--dark-surface);
-    padding: 4rem 0;
-}
-
-.gallery-filters {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    background: transparent;
-    border: 2px solid var(--neon-green-dim);
-    color: var(--text-secondary);
-    padding: 0.8rem 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    border-color: var(--neon-green);
-    color: var(--neon-green);
-    box-shadow: 0 0 20px var(--neon-green-glow);
-    text-shadow: 0 0 10px var(--neon-green-glow);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.gallery-item {
-    background: var(--dark-elevated);
-    border: 1px solid var(--neon-green-dim);
-    overflow: hidden;
-    position: relative;
-    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
-    transition: all 0.3s ease;
-}
-
-.gallery-item:hover {
-    border-color: var(--neon-green);
-    box-shadow: 0 0 30px var(--neon-green-glow);
-    transform: scale(1.05);
-}
-
-.gallery-overlay {
-    background: linear-gradient(45deg, var(--dark-bg), var(--neon-green-dim));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 0.9;
-}
 
 /* Contact Section - Command Center */
 .contact-section {

@@ -23,11 +23,7 @@ get_header(); ?>
             <!-- Events Section -->
             <?php get_template_part('template-parts/events'); ?>
             
-            <!-- Gallery Section -->
-            <?php get_template_part('template-parts/gallery'); ?>
             
-            <!-- Contact Section -->
-            <?php get_template_part('template-parts/contact'); ?>
             
         <?php else : ?>
             

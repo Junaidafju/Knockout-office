@@ -34,15 +34,6 @@ get_header(); ?>
         <?php get_template_part('template-parts/events'); ?>
     </div>
     
-    <!-- Gallery Section -->
-    <div class="gallery-wrapper section-wrapper">
-        <?php get_template_part('template-parts/gallery'); ?>
-    </div>
-    
-    <!-- Contact Section -->
-    <div class="contact-wrapper section-wrapper">
-        <?php get_template_part('template-parts/contact'); ?>
-    </div>
 </main>
 
 <?php get_footer(); ?>

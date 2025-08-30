@@ -1,0 +1,122 @@
+/* =====================
+   Page Loader Styles
+   ===================== */
+
+/* Page Loader Overlay */
+.page-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Transparent background with blur effect */
+  background: rgba(12, 12, 12, 0.25);
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  
+  /* Performance optimizations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: opacity, visibility;
+}
+
+.page-loader-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateZ(0) scale(0.95);
+}
+
+.text-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+     
+    /* Performance optimizations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.knockout-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  fill: none;
+  stroke: url(#text-gradient);
+  stroke-width: 1.5px;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: dash-text 2s ease-in-out infinite alternate,
+             glow 1.5s ease-in-out infinite alternate;
+  will-change: stroke-dashoffset, filter;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes dash-text {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 8px #973BED) drop-shadow(0 0 15px #007CFF);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px #b0d136) drop-shadow(0 0 20px #FFC800);
+  }
+  100% {
+    filter: drop-shadow(0 0 8px #973BED) drop-shadow(0 0 15px #007CFF);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .knockout-text {
+    font-size: 35px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+  }
+  
+  @keyframes dash-text {
+    0% {
+      stroke-dashoffset: 450;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .knockout-text {
+    font-size: 28px;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 350;
+  }
+  
+  @keyframes dash-text {
+    0% {
+      stroke-dashoffset: 350;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}

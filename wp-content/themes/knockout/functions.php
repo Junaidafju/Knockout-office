@@ -140,6 +140,12 @@ function knockout_scripts() {
     // Enqueue about page styles - load on all pages to ensure availability
     wp_enqueue_style('knockout-about', get_template_directory_uri() . '/assets/css/about.css', array('knockout-style', 'knockout-neon-theme'), '1.0.5');
 
+    // Gallery page styles
+    wp_enqueue_style('knockout-gallery', get_template_directory_uri() . '/assets/css/gallery.css', array('knockout-style'), '1.0.0');
+
+    // Contact page styles
+    wp_enqueue_style('knockout-contact', get_template_directory_uri() . '/assets/css/contact.css', array('knockout-style'), '1.0.0');
+
     // Celebration burst effect (site-wide on load)
     wp_enqueue_style(
         'knockout-burst',
@@ -177,6 +183,15 @@ function knockout_scripts() {
         ));
     }
 
+    // Enqueue footer CSS with bubble effects
+    wp_enqueue_style('knockout-footer', get_template_directory_uri() . '/assets/css/footer.css', array('knockout-style'), '1.0.0');
+    
+    // Enqueue loader CSS
+    wp_enqueue_style('knockout-loader', get_template_directory_uri() . '/assets/css/loader.css', array('knockout-style'), '1.0.0');
+    
+    // Enqueue page loader JavaScript
+    wp_enqueue_script('knockout-page-loader', get_template_directory_uri() . '/js/page-loader.js', array(), '1.0.0', false);
+    
     // Enqueue comment reply script on singular posts/pages with comments open
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -291,8 +306,8 @@ function knockout_fallback_left_menu() {
 // Right menu fallback
 function knockout_fallback_right_menu() {
    echo '<ul>';
-   echo '<li><a href="' . esc_url(home_url('/#gallery')) . '">Gallery</a></li>';
-   echo '<li><a href="' . esc_url(home_url('/#contact')) . '">Contact</a></li>';
+   echo '<li><a href="' . esc_url(home_url('/gallery/')) . '">Gallery</a></li>';
+   echo '<li><a href="' . esc_url(home_url('/contact/')) . '">Contact</a></li>';
    echo '<li><a href="' . esc_url(home_url('/blogs/')) . '">Blogs</a></li>';
    echo '</ul>';
 }
@@ -303,8 +318,8 @@ function knockout_fallback_mobile_menu() {
    echo '<li><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
    echo '<li><a href="' . esc_url(home_url('/menu/')) . '">Menu</a></li>';
    echo '<li><a href="' . esc_url(home_url('/#events')) . '">Events</a></li>';
-   echo '<li><a href="' . esc_url(home_url('/#gallery')) . '">Gallery</a></li>';
-   echo '<li><a href="' . esc_url(home_url('/#contact')) . '">Contact</a></li>';
+   echo '<li><a href="' . esc_url(home_url('/gallery/')) . '">Gallery</a></li>';
+   echo '<li><a href="' . esc_url(home_url('/contact/')) . '">Contact</a></li>';
    echo '<li><a href="' . esc_url(home_url('/blogs/')) . '">Blogs</a></li>';
    echo '</ul>';
 }
@@ -427,12 +442,18 @@ add_action('customize_register', 'knockout_neon_customize_register', 20);
 // Add custom rewrite rule for menu page
 function knockout_add_menu_rewrite_rule() {
     add_rewrite_rule('^menu/?$', 'index.php?knockout_menu=1', 'top');
+    // Add gallery rewrite
+    add_rewrite_rule('^gallery/?$', 'index.php?knockout_gallery=1', 'top');
+    // Add contact rewrite
+    add_rewrite_rule('^contact/?$', 'index.php?knockout_contact=1', 'top');
 }
 add_action('init', 'knockout_add_menu_rewrite_rule');
 
 // Add custom query var
 function knockout_add_menu_query_var($vars) {
     $vars[] = 'knockout_menu';
+    $vars[] = 'knockout_gallery';
+    $vars[] = 'knockout_contact';
     return $vars;
 }
 add_filter('query_vars', 'knockout_add_menu_query_var');
@@ -455,6 +476,19 @@ function knockout_menu_template_redirect() {
             exit;
         }
     }
+    if (get_query_var('knockout_gallery')) {
+        // Serve the standalone gallery template
+        if (file_exists(get_template_directory() . '/gallery.php')) {
+            include(get_template_directory() . '/gallery.php');
+            exit;
+        }
+    }
+    if (get_query_var('knockout_contact')) {
+        if (file_exists(get_template_directory() . '/contact.php')) {
+            include(get_template_directory() . '/contact.php');
+            exit;
+        }
+    }
 }
 add_action('template_redirect', 'knockout_menu_template_redirect');
 
@@ -462,6 +496,12 @@ add_action('template_redirect', 'knockout_menu_template_redirect');
 function knockout_menu_document_title($title) {
     if (get_query_var('knockout_menu')) {
         return 'Menu - ' . get_bloginfo('name');
+    }
+    if (get_query_var('knockout_gallery')) {
+        return 'Gallery - ' . get_bloginfo('name');
+    }
+    if (get_query_var('knockout_contact')) {
+        return 'Contact - ' . get_bloginfo('name');
     }
     return $title;
 }
@@ -484,10 +524,11 @@ add_action('after_switch_theme', 'knockout_flush_rewrite_rules');
 
 // Check if rewrite rules need to be flushed (run once)
 function knockout_maybe_flush_rewrite_rules() {
-    if (get_option('knockout_rewrite_rules_flushed') !== '1.0') {
+    // bump version to force flush when new rules (gallery) added
+    if (get_option('knockout_rewrite_rules_flushed') !== '1.2') {
         knockout_add_menu_rewrite_rule();
         flush_rewrite_rules();
-        update_option('knockout_rewrite_rules_flushed', '1.0');
+        update_option('knockout_rewrite_rules_flushed', '1.2');
         
         // Add debug info (can be removed later)
         if (WP_DEBUG) {

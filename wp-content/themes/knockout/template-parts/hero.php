@@ -16,11 +16,12 @@
                playsinline 
                preload="auto"
                controls="false"
-               style="opacity: 0.8; display: block;">
+               style="opacity: 0.8; display: block;"
+               id="hero-video">
             <!-- Your custom sports cafe video from Cloudinary -->
-            <source src="https://res.cloudinary.com/dcvn7lbh6/video/upload/v1754394117/for-webside-1-3_vfyvv1.mp4" type="video/mp4">
+            <source src="https://res.cloudinary.com/dcvn7lbh6/video/upload/v1756540478/Untitled_design_cgbvpw.mp4" type="video/mp4">
             <!-- Fallback video -->
-            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+            <source src="https://res.cloudinary.com/dcvn7lbh6/video/upload/v1754481893/vecteezy_ten-pin-bowling-pins-falling_2270565_lpegri.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <!-- Fallback image if video doesn't load -->
