@@ -10,23 +10,45 @@
 
 <div class="ko-gallery-container">
   <div class="ko-gallery-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg" alt="Plotting Cat">
-    <div class="ko-gallery-card-head">Plotting Cat</div>
+    <img src="https://img.freepik.com/premium-psd/poster-party-called-party-club-social-media-post_771384-157.jpg" alt="DJ Mark & Martin">
+    <div class="ko-gallery-card-head">Night Party</div>
   </div>
   <div class="ko-gallery-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg" alt="Angry Cat">
-    <div class="ko-gallery-card-head">Angry Cat</div>
+    <img src="https://img.freepik.com/free-psd/party-night-club-social-media-post-template-design_505751-4845.jpg?semt=ais_hybrid&w=740&q=80" alt="DJ Wayan">
+    <div class="ko-gallery-card-head">Saturday Party</div>
   </div>
   <div class="ko-gallery-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG" alt="Curious Cat">
-    <div class="ko-gallery-card-head">Curious Cat</div>
+    <img src="https://freepsdflyer.com/wp-content/uploads/2025/06/Green-Neon-Concert-Flyer-Template.jpg" alt="Concert">
+    <div class="ko-gallery-card-head">Concert</div>
   </div>
   <div class="ko-gallery-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg" alt="Prowling Cat">
-    <div class="ko-gallery-card-head">Prowling Cat</div>
+    <img src="https://i.etsystatic.com/40750701/r/il/18969c/4717403156/il_570xN.4717403156_ii1p.jpg" alt="St. Patrics Day">
+    <div class="ko-gallery-card-head">St. Patrics Day</div>
   </div>
   <div class="ko-gallery-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg" alt="Sleepy Cat">
-    <div class="ko-gallery-card-head">Sleepy Cat</div>
+    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/st.-patrick%27s-day-party-flyer-design-template-ec9497f85beb597df75e8ac84564734e_screen.jpg?ts=1646910392" alt="Patrics Day">
+    <div class="ko-gallery-card-head">Patrics Day</div>
+  </div>
+</div>
+<div class="ko-gallery-container">
+  <div class="ko-gallery-card">
+    <img src="https://img.freepik.com/premium-psd/poster-party-called-party-club-social-media-post_771384-157.jpg" alt="DJ Mark & Martin">
+    <div class="ko-gallery-card-head">Night Party</div>
+  </div>
+  <div class="ko-gallery-card">
+    <img src="https://img.freepik.com/free-psd/party-night-club-social-media-post-template-design_505751-4845.jpg?semt=ais_hybrid&w=740&q=80" alt="DJ Wayan">
+    <div class="ko-gallery-card-head">Saturday Party</div>
+  </div>
+  <div class="ko-gallery-card">
+    <img src="https://freepsdflyer.com/wp-content/uploads/2025/06/Green-Neon-Concert-Flyer-Template.jpg" alt="Concert">
+    <div class="ko-gallery-card-head">Concert</div>
+  </div>
+  <div class="ko-gallery-card">
+    <img src="https://i.etsystatic.com/40750701/r/il/18969c/4717403156/il_570xN.4717403156_ii1p.jpg" alt="St. Patrics Day">
+    <div class="ko-gallery-card-head">St. Patrics Day</div>
+  </div>
+  <div class="ko-gallery-card">
+    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/st.-patrick%27s-day-party-flyer-design-template-ec9497f85beb597df75e8ac84564734e_screen.jpg?ts=1646910392" alt="Patrics Day">
+    <div class="ko-gallery-card-head">Patrics Day</div>
   </div>
 </div>

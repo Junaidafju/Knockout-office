@@ -48,11 +48,11 @@
                 </div>
                 
                 <div class="hero-buttons">
-                    <a href="<?php echo esc_url(get_theme_mod('hero_primary_link', '#booking')); ?>" class="btn-3d btn-3d-primary">
+                    <a href="<?php echo esc_url(get_theme_mod('hero_primary_link', '/contact/')); ?>" class="btn-3d btn-3d-primary">
                         <span class="btn-icon">🎯</span>
                         <span class="btn-text"><?php echo esc_html(get_theme_mod('hero_primary_text', 'Book Now')); ?></span>
                     </a>
-                    <a href="<?php echo esc_url(get_theme_mod('hero_secondary_link', '#menu')); ?>" class="btn-3d btn-3d-secondary">
+                    <a href="<?php echo esc_url(get_theme_mod('hero_secondary_link', '/menu/')); ?>" class="btn-3d btn-3d-secondary">
                         <span class="btn-icon">😎</span>
                         <span class="btn-text"><?php echo esc_html(get_theme_mod('hero_secondary_link', 'View Menu')); ?></span>
                     </a>

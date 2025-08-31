@@ -83,7 +83,7 @@
                 <use xlink:href="#gentle-wave" x="50" y="9" opacity="0.1" fill="#b0d136" />
             </g>
             <g class="parallax4">
-                <use xlink:href="#gentle-wave" x="50" y="6" fill="#000000" />
+                <use xlink:href="#gentle-wave" x="50" y="6" fill="#0d0d0d" />
             </g>
         </svg>
     </div>

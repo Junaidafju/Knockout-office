@@ -1,5 +1,11 @@
 /* Gallery Page Styles - Header hero + interactive cards */
-
+@font-face {
+    src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+      format("woff2");
+    font-family: "Meta";
+    font-style: normal;
+    font-weight: normal;
+  }
 .ko-gallery-hero {
     background-image: url(http://junaid-knockout.test/wp-content/themes/knockout/assets/images/bg.jpg);
     /* background-size: cover; */
@@ -30,15 +36,25 @@
 }
 
 .ko-gallery-hero-title {
-    position: relative;
+    transition: all 0.5s;
+    -webkit-text-stroke: clamp(1px, 0.3vw, 4px) #b0d136;
+    font-variation-settings: "wght" 900, "ital" 1;
+    font-size: clamp(3rem, 8vw, 15rem);
     z-index: 1;
-    color: #ffffff;
-    font-size: clamp(2rem, 5vw, 3.25rem);
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    color: transparent;
+    font-family: "Meta", sans-serif;
+    text-shadow: clamp(3px, 0.7vw, 10px) clamp(3px, 0.7vw, 10px) 0px #07bccc,
+    clamp(4px, 1vw, 15px) clamp(4px, 1vw, 15px) 0px #e601c0,
+    clamp(6px, 1.3vw, 20px) clamp(6px, 1.3vw, 20px) 0px #e9019a,
+    clamp(8px, 1.7vw, 25px) clamp(8px, 1.7vw, 25px) 0px #f40468,
+    clamp(15px, 3vw, 45px) clamp(15px, 3vw, 45px) clamp(3px, 0.7vw, 10px) #1f1241;
+  cursor: pointer;
     text-align: center;
 }
+.ko-gallery-hero-title:hover {
+    font-variation-settings: "wght" 100, "ital" 0;
+    text-shadow: none;
+  }
 
 /* Cards container */
 .ko-gallery-container {
