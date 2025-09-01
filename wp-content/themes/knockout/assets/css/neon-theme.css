@@ -924,7 +924,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+    /* clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%); */
     color: var(--dark-bg);
     font-size: 1.5rem;
 }

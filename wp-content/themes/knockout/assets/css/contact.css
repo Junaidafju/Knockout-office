@@ -66,55 +66,51 @@
 }
 
 .ko-contact-page .contact-icon {
-    width: 70px;
-    height: 70px;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
-    background: rgba(176, 209, 54, 0.15);
+    background: transparent;
     border: 1px solid rgba(176, 209, 54, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto clamp(16px, 2.5vw, 20px);
     position: relative;
-    overflow: hidden;
-    box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.ko-contact-page .contact-icon::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
+.ko-contact-page .contact-icon::before { display: none; }
+
+/* Lottie animation styling */
+.ko-contact-page .contact-icon dotlottie-wc {
+    width: 76px !important;
+    height: 76px !important;
     border-radius: 50%;
-    background: inherit;
-    filter: blur(8px);
-    opacity: 0.3;
-    z-index: -1;
+    overflow: hidden;
+    z-index: 2;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.3s ease;
 }
 
-.ko-contact-page .contact-icon svg {
-    width: 32px;
-    height: 32px;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-    z-index: 2;
+/* Hover effects for Lottie animations */
+.ko-contact-page .contact-card:hover .contact-icon dotlottie-wc {
+    transform: scale(1.05);
+}
+
+/* Ensure Lottie animations are responsive */
+.ko-contact-page .contact-icon dotlottie-wc canvas {
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* Contact card specific icon colors */
-.ko-contact-page .contact-card.visit-us .contact-icon {
-    background: rgba(176, 209, 54, 0.8);
-    border-color: rgba(176, 209, 54, 0.6);
-}
+.ko-contact-page .contact-card.visit-us .contact-icon { background: transparent; border-color: rgba(176, 209, 54, 0.6); }
 
-.ko-contact-page .contact-card.call-us .contact-icon {
-    background: rgba(0, 212, 255, 0.8);
-    border-color: rgba(0, 212, 255, 0.6);
-}
+.ko-contact-page .contact-card.call-us .contact-icon { background: transparent; border-color: rgba(176, 209, 54, 0.6); }
 
-.ko-contact-page .contact-card.email-us .contact-icon {
-    background: rgba(230, 1, 192, 0.8);
-    border-color: rgba(230, 1, 192, 0.6);
-}
+.ko-contact-page .contact-card.email-us .contact-icon { background: transparent; border-color: rgba(176, 209, 54, 0.6); }
 
 /* Card content styling */
 .ko-contact-page .contact-card h3 {
@@ -134,18 +130,18 @@
 }
 
 .ko-contact-page .contact-card a {
-    color: #00d4ff;
+    color: #b0d136;
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 600;
 }
 
 .ko-contact-page .contact-card a:hover {
-    color: #b0d136;
+    color: #fffb00;
 }
 
 .ko-contact-page .contact-hours {
-    background: rgba(176, 209, 54, 0.1);
+    /* background: rgba(176, 209, 54, 0.1); */
     border-radius: 12px;
     padding: clamp(12px, 2vw, 16px);
     margin-top: clamp(8px, 1.5vw, 12px);
@@ -153,13 +149,13 @@
 }
 
 .ko-contact-page .contact-note {
-    background: rgba(0, 212, 255, 0.1);
+    /* background: rgba(0, 212, 255, 0.1); */
     border-radius: 12px;
     padding: clamp(8px, 1.5vw, 12px);
     margin-top: clamp(8px, 1.5vw, 12px);
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    border: 1px solid rgba(176, 209, 54, 0.2);
     font-size: 0.9rem;
-    color: #00d4ff;
+    color: #b0d136;
 }
 
 .ko-contact-page .btn-outline {
@@ -180,6 +176,47 @@
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Messages */
+.ko-contact-page .form-message {
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ko-contact-page .form-message.success {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    color: #00ff00;
+}
+
+.ko-contact-page .form-message.error {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff4444;
+}
+
+.ko-contact-page .form-message.debug {
+    background: rgba(0, 123, 255, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.3);
+    color: #007bff;
+    text-align: left;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.ko-contact-page .form-message.debug h4 {
+    margin: 0 0 12px 0;
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.ko-contact-page .form-message.debug p {
+    margin: 4px 0;
+    font-size: 0.85rem;
 }
 
 /* Form */
@@ -237,6 +274,23 @@
     font-size: 1rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+}
+
+/* Dropdown options styling */
+.ko-contact-page select option {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 12px 16px;
+    border: none;
+}
+
+.ko-contact-page select option:hover {
+    background: #2a2a2a;
+}
+
+.ko-contact-page select option:checked {
+    background: rgba(176, 209, 54, 0.3);
+    color: #b0d136;
 }
 
 .ko-contact-page input:focus,
@@ -308,6 +362,395 @@
     background: rgba(255,255,255,0.03);
 }
 
+/* Lottie animation styling */
+.ko-contact-page .contact-icon dotlottie-wc {
+    width: 76px !important;
+    height: 76px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects for Lottie animations */
+.ko-contact-page .contact-card:hover .contact-icon dotlottie-wc {
+    transform: scale(1.05);
+}
+
+/* Ensure Lottie animations are responsive */
+.ko-contact-page .contact-icon dotlottie-wc canvas {
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Glow button styles */
+.ko-contact-page .glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(17, 17, 17);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: clamp(8px, 1.5vw, 12px);
+}
+
+.ko-contact-page .glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -2;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing_contact_btn 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.ko-contact-page .glow-on-hover:active {
+  color: #000;
+}
+
+.ko-contact-page .glow-on-hover:active:after {
+  background: transparent;
+}
+
+.ko-contact-page .glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.ko-contact-page .glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing_contact_btn {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Responsive glow button */
+@media (max-width: 600px) {
+  .ko-contact-page .glow-on-hover {
+    width: 180px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Neon Checkbox Styles */
+.ko-contact-page .checkbox-label {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #b0d136;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ko-contact-page .checkbox-text {
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+.ko-contact-page .neon-checkbox {
+  --primary: #b0d136;
+  --primary-dark: #00cc88;
+  --primary-light: #b0d136;
+  --size: 30px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+
+.ko-contact-page .neon-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  z-index: 1;
+}
+
+.ko-contact-page .neon-checkbox__frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ko-contact-page .neon-checkbox__box {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  border: 2px solid var(--primary-dark);
+  transition: all 0.4s ease;
+}
+
+.ko-contact-page .neon-checkbox__check-container {
+  position: absolute;
+  inset: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ko-contact-page .neon-checkbox__check {
+  width: 80%;
+  height: 80%;
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transform-origin: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ko-contact-page .neon-checkbox__glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 6px;
+  background: var(--primary);
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(1.2);
+  transition: all 0.4s ease;
+}
+
+.ko-contact-page .neon-checkbox__borders {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  overflow: hidden;
+}
+
+.ko-contact-page .neon-checkbox__borders span {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ko-contact-page .neon-checkbox__borders span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  animation: borderFlow1 2s linear infinite;
+}
+
+.ko-contact-page .neon-checkbox__borders span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 1px;
+  height: 40px;
+  animation: borderFlow2 2s linear infinite;
+}
+
+.ko-contact-page .neon-checkbox__borders span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  animation: borderFlow3 2s linear infinite;
+}
+
+.ko-contact-page .neon-checkbox__borders span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 1px;
+  height: 40px;
+  animation: borderFlow4 2s linear infinite;
+}
+
+.ko-contact-page .neon-checkbox__particles span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 6px var(--primary);
+}
+
+.ko-contact-page .neon-checkbox__rings {
+  position: absolute;
+  inset: -20px;
+  pointer-events: none;
+}
+
+.ko-contact-page .neon-checkbox__rings .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.ko-contact-page .neon-checkbox__sparks span {
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  opacity: 0;
+}
+
+/* Hover Effects */
+.ko-contact-page .neon-checkbox:hover .neon-checkbox__box {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* Checked State */
+.ko-contact-page .neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__box {
+  border-color: var(--primary);
+  background: rgba(0, 255, 170, 0.1);
+}
+
+.ko-contact-page .neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__check {
+  stroke-dashoffset: 0;
+  transform: scale(1.1);
+}
+
+.ko-contact-page .neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__glow {
+  opacity: 0.2;
+}
+
+.ko-contact-page .neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__borders span {
+  opacity: 1;
+}
+
+/* Particle Animations */
+.ko-contact-page .neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__particles span {
+  animation: particleExplosion 0.6s ease-out forwards;
+}
+
+.ko-contact-page .neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__rings .ring {
+  animation: ringPulse 0.6s ease-out forwards;
+}
+
+.ko-contact-page .neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__sparks span {
+  animation: sparkFlash 0.6s ease-out forwards;
+}
+
+/* Animations */
+@keyframes borderFlow1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes borderFlow2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(200%); }
+}
+
+@keyframes borderFlow3 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); }
+}
+
+@keyframes borderFlow4 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-200%); }
+}
+
+@keyframes particleExplosion {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  20% { opacity: 1; }
+  100% {
+    transform: translate(calc(-50% + var(--x, 20px)), calc(-50% + var(--y, 20px))) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes ringPulse {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes sparkFlash {
+  0% {
+    transform: rotate(var(--r, 0deg)) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--r, 0deg)) translateX(30px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Particle Positions */
+.ko-contact-page .neon-checkbox__particles span:nth-child(1) { --x: 25px; --y: -25px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(2) { --x: -25px; --y: -25px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(3) { --x: 25px; --y: 25px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(4) { --x: -25px; --y: 25px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(5) { --x: 35px; --y: 0px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(6) { --x: -35px; --y: 0px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(7) { --x: 0px; --y: 35px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(8) { --x: 0px; --y: -35px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(9) { --x: 20px; --y: -30px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(10) { --x: -20px; --y: 30px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(11) { --x: 30px; --y: 20px; }
+.ko-contact-page .neon-checkbox__particles span:nth-child(12) { --x: -30px; --y: -20px; }
+
+/* Spark Rotations */
+.ko-contact-page .neon-checkbox__sparks span:nth-child(1) { --r: 0deg; top: 50%; left: 50%; }
+.ko-contact-page .neon-checkbox__sparks span:nth-child(2) { --r: 90deg; top: 50%; left: 50%; }
+.ko-contact-page .neon-checkbox__sparks span:nth-child(3) { --r: 180deg; top: 50%; left: 50%; }
+.ko-contact-page .neon-checkbox__sparks span:nth-child(4) { --r: 270deg; top: 50%; left: 50%; }
+
+/* Ring Delays */
+.ko-contact-page .neon-checkbox__rings .ring:nth-child(1) { animation-delay: 0s; }
+.ko-contact-page .neon-checkbox__rings .ring:nth-child(2) { animation-delay: 0.1s; }
+.ko-contact-page .neon-checkbox__rings .ring:nth-child(3) { animation-delay: 0.2s; }
+
 /* Mobile improvements for equal card sizes */
 @media (max-width: 600px) {
     .ko-contact-page .contact-info {
@@ -345,14 +788,11 @@
         padding: 14px 16px;
     }
     
-    .ko-contact-page .contact-icon {
-        width: 60px;
-        height: 60px;
-    }
+    .ko-contact-page .contact-icon { width: 60px; height: 60px; }
     
-    .ko-contact-page .contact-icon svg {
-        width: 28px;
-        height: 28px;
+    .ko-contact-page .contact-icon dotlottie-wc {
+        width: 60px !important;
+        height: 60px !important;
     }
 }
 
