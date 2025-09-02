@@ -558,3 +558,344 @@ function knockout_deactivation_flush_rewrite_rules() {
     delete_option('knockout_rewrite_rules_flushed');
 }
 add_action('switch_theme', 'knockout_deactivation_flush_rewrite_rules');
+
+/**
+ * Contact Form Email Configuration
+ */
+
+// Load SMTP configuration if file exists
+function knockout_load_smtp_config() {
+    $smtp_config_file = get_template_directory() . '/smtp-config.php';
+    if (file_exists($smtp_config_file)) {
+        require_once($smtp_config_file);
+    }
+}
+add_action('after_setup_theme', 'knockout_load_smtp_config', 5);
+
+// Configure SMTP for WordPress emails
+function knockout_configure_smtp() {
+    // Only configure SMTP if we're not in a local environment without SMTP
+    // In production, you'll want to use proper SMTP settings
+    
+    // For localhost development with Gmail SMTP (requires app password)
+    if (defined('SMTP_HOST') && SMTP_HOST) {
+        add_action('phpmailer_init', 'knockout_configure_phpmailer');
+    }
+}
+add_action('init', 'knockout_configure_smtp');
+
+// PHPMailer SMTP configuration
+function knockout_configure_phpmailer($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host = defined('SMTP_HOST') ? SMTP_HOST : 'smtp.gmail.com';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = defined('SMTP_PORT') ? SMTP_PORT : 587;
+    $phpmailer->SMTPSecure = defined('SMTP_SECURE') ? SMTP_SECURE : 'tls';
+    $phpmailer->Username = defined('SMTP_USERNAME') ? SMTP_USERNAME : '';
+    $phpmailer->Password = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : '';
+    
+    // Set from email and name
+    $phpmailer->From = defined('SMTP_FROM_EMAIL') ? SMTP_FROM_EMAIL : get_option('admin_email');
+    $phpmailer->FromName = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : get_option('blogname');
+    
+    // Enable debugging for localhost
+    if (defined('WP_DEBUG') && WP_DEBUG) {
+        $phpmailer->SMTPDebug = 2;
+        $phpmailer->Debugoutput = 'error_log';
+    }
+}
+
+// Handle contact form submission globally
+function knockout_handle_contact_form() {
+    // Debug logging
+    error_log('knockout_handle_contact_form() called');
+    error_log('REQUEST_METHOD: ' . $_SERVER['REQUEST_METHOD']);
+    error_log('POST data keys: ' . implode(', ', array_keys($_POST)));
+    
+    // Check if this is a contact form submission
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_name'])) {
+        error_log('Contact form submission detected');
+        
+        // Verify nonce for security
+        if (!isset($_POST['contact_nonce']) || !wp_verify_nonce($_POST['contact_nonce'], 'knockout_contact_form')) {
+            return array('error' => 'Security verification failed. Please try again.');
+        }
+        
+        // Rate limiting - check if user has submitted recently
+        $user_ip = $_SERVER['REMOTE_ADDR'];
+        $rate_limit_key = 'knockout_contact_' . md5($user_ip);
+        $last_submission = get_transient($rate_limit_key);
+        
+        // More reasonable rate limiting:
+        // - For localhost/development: 30 seconds
+        // - For production: 60 seconds per IP
+        $rate_limit_time = (defined('WP_DEBUG') && WP_DEBUG) ? 30 : 60;
+        
+        if ($last_submission) {
+            $time_remaining = $rate_limit_time - (time() - $last_submission);
+            if ($time_remaining > 0) {
+                return array('error' => "Please wait {$time_remaining} seconds before submitting another message.");
+            }
+        }
+        
+        // Get and sanitize form data
+        $name = sanitize_text_field($_POST['contact_name']);
+        $email = sanitize_email($_POST['contact_email']);
+        $phone = sanitize_text_field($_POST['contact_phone']);
+        $subject = sanitize_text_field($_POST['contact_subject']);
+        $message = sanitize_textarea_field($_POST['contact_message']);
+        $newsletter = isset($_POST['contact_newsletter']) ? 'Yes' : 'No';
+        
+        // Validation
+        if (empty($name) || empty($email) || empty($message)) {
+            return array('error' => 'Please fill in all required fields.');
+        }
+        
+        if (!is_email($email)) {
+            return array('error' => 'Please enter a valid email address.');
+        }
+        
+        // Prepare email content - configurable recipient
+        $to = get_option('knockout_contact_email', 'junaidafju@gmail.com'); // Default to business email
+        $email_subject = 'New Contact Form Submission from ' . get_bloginfo('name');
+        
+        // Log email sending attempt
+        error_log('Sending contact form email to: ' . $to);
+        error_log('From user: ' . $email . ' (' . $name . ')');
+        error_log('Subject: ' . $email_subject);
+        
+        // Create HTML email message
+        $email_message = knockout_get_contact_email_template(array(
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'subject' => $subject,
+            'message' => $message,
+            'newsletter' => $newsletter,
+            'submission_time' => current_time('mysql'),
+            'user_ip' => $user_ip
+        ));
+        
+        // Set email headers
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>',
+            'Reply-To: ' . $name . ' <' . $email . '>'
+        );
+        
+        // Send the email
+        $email_sent = wp_mail($to, $email_subject, $email_message, $headers);
+        
+        if ($email_sent) {
+            // Set rate limiting with the same duration as the check
+            $rate_limit_duration = (defined('WP_DEBUG') && WP_DEBUG) ? 30 : 60;
+            set_transient($rate_limit_key, time(), $rate_limit_duration);
+            
+            // Send auto-reply to user
+            knockout_send_contact_auto_reply($email, $name);
+            
+            error_log('Contact form email sent successfully to: ' . $to);
+            return array('success' => 'Thank you! Your message has been sent successfully. We will get back to you soon.');
+        } else {
+            error_log('Failed to send contact form email');
+            return array('error' => 'Sorry, there was an error sending your message. Please try again later.');
+        }
+    }
+    
+    return null;
+}
+
+// Process contact form early in WordPress lifecycle
+function knockout_process_contact_form_early() {
+    // Only process on contact page
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_name']) && 
+        (strpos($_SERVER['REQUEST_URI'], '/contact/') !== false || get_query_var('knockout_contact'))) {
+        
+        $result = knockout_handle_contact_form();
+        
+        if ($result) {
+            // Store result in global for template to access
+            global $knockout_contact_result;
+            $knockout_contact_result = $result;
+        }
+    }
+}
+add_action('wp', 'knockout_process_contact_form_early');
+
+// Get contact form result for template
+function knockout_get_contact_form_result() {
+    global $knockout_contact_result;
+    return $knockout_contact_result;
+}
+
+// Get contact email template
+function knockout_get_contact_email_template($data) {
+    $template = '
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Contact Form Submission</title>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+            .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+            .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+            .field { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #b0d136; }
+            .field strong { color: #333; }
+            .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>🎳 New Contact Form Submission</h1>
+                <p>KnockOut Sports Café</p>
+            </div>
+            
+            <div class="field">
+                <strong>Name:</strong> ' . esc_html($data['name']) . '
+            </div>
+            
+            <div class="field">
+                <strong>Email:</strong> <a href="mailto:' . esc_attr($data['email']) . '">' . esc_html($data['email']) . '</a>
+            </div>
+            
+            ' . (!empty($data['phone']) ? '<div class="field"><strong>Phone:</strong> ' . esc_html($data['phone']) . '</div>' : '') . '
+            
+            ' . (!empty($data['subject']) ? '<div class="field"><strong>Subject:</strong> ' . esc_html(ucfirst($data['subject'])) . '</div>' : '') . '
+            
+            <div class="field">
+                <strong>Message:</strong><br>
+                ' . nl2br(esc_html($data['message'])) . '
+            </div>
+            
+            <div class="field">
+                <strong>Newsletter Subscription:</strong> ' . esc_html($data['newsletter']) . '
+            </div>
+            
+            <div class="footer">
+                <p><strong>Submission Details:</strong></p>
+                <p>Time: ' . esc_html($data['submission_time']) . '<br>
+                IP Address: ' . esc_html($data['user_ip']) . '<br>
+                Website: <a href="' . esc_url(home_url()) . '">' . esc_html(get_bloginfo('name')) . '</a></p>
+            </div>
+        </div>
+    </body>
+    </html>';
+    
+    return $template;
+}
+
+// Send auto-reply to the user
+function knockout_send_contact_auto_reply($user_email, $user_name) {
+    $subject = 'Thank you for contacting ' . get_bloginfo('name');
+    
+    $message = '
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thank You for Contacting Us</title>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+            .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+            .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+            .content { margin-bottom: 20px; }
+            .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>🎳 Thank You, ' . esc_html($user_name) . '!</h1>
+                <p>KnockOut Sports Café</p>
+            </div>
+            
+            <div class="content">
+                <p>Hi ' . esc_html($user_name) . ',</p>
+                
+                <p>Thank you for reaching out to us! We have successfully received your message and our team will get back to you within 24 hours.</p>
+                
+                <p>In the meantime, feel free to:</p>
+                <ul>
+                    <li>🎳 Book a lane for bowling</li>
+                    <li>🍕 Check out our delicious menu</li>
+                    <li>🎮 Explore our e-sports arena</li>
+                    <li>📸 View our gallery</li>
+                </ul>
+                
+                <p>We look forward to seeing you at KnockOut!</p>
+                
+                <p>Best regards,<br>
+                The KnockOut Team</p>
+            </div>
+            
+            <div class="footer">
+                <p>📍 RDB Cinemas, Salt Lake, Sector 5, Kolkata, West Bengal (700135)<br>
+                📞 (555) 123-BOWL | 📧 junaidafju@gmail.com</p>
+                
+                <p><em>This is an automated message. Please do not reply to this email.</em></p>
+            </div>
+        </div>
+    </body>
+    </html>';
+    
+    $headers = array(
+        'Content-Type: text/html; charset=UTF-8',
+        'From: ' . get_bloginfo('name') . ' <junaidafju@gmail.com>'
+    );
+    
+    wp_mail($user_email, $subject, $message, $headers);
+}
+
+// Clear rate limiting for testing
+function knockout_clear_rate_limit() {
+    if (isset($_GET['clear_rate_limit']) && $_GET['clear_rate_limit'] === 'knockout') {
+        global $wpdb;
+        
+        // Delete all contact rate limit transients
+        $wpdb->query(
+            "DELETE FROM {$wpdb->options} 
+             WHERE option_name LIKE '_transient_knockout_contact_%' 
+             OR option_name LIKE '_transient_timeout_knockout_contact_%'"
+        );
+        
+        wp_die('✅ Rate limiting cleared! You can now test the contact form again. <a href="' . home_url('/contact/') . '">← Go to Contact Form</a>');
+    }
+}
+add_action('init', 'knockout_clear_rate_limit');
+// To clear rate limit: visit yoursite.com/?clear_rate_limit=knockout
+
+// Set up contact form email configuration
+function knockout_setup_contact_email() {
+    // Set default contact email if not already set
+    if (!get_option('knockout_contact_email')) {
+        update_option('knockout_contact_email', 'junaidafju@gmail.com');
+    }
+}
+add_action('after_switch_theme', 'knockout_setup_contact_email');
+
+// Add function to change contact email address
+function knockout_set_contact_email($email) {
+    if (is_email($email)) {
+        update_option('knockout_contact_email', $email);
+        return true;
+    }
+    return false;
+}
+
+// Contact email configuration via URL (for easy setup)
+function knockout_config_contact_email() {
+    if (isset($_GET['set_contact_email']) && isset($_GET['email'])) {
+        $new_email = sanitize_email($_GET['email']);
+        if (knockout_set_contact_email($new_email)) {
+            wp_die('✅ Contact email updated to: ' . $new_email . ' <a href="' . home_url('/contact/') . '">← Test Contact Form</a>');
+        } else {
+            wp_die('❌ Invalid email address provided. <a href="' . home_url('/contact/') . '">← Go Back</a>');
+        }
+    }
+}
+add_action('init', 'knockout_config_contact_email');
+// To change contact email: visit yoursite.com/?set_contact_email=1&email=newemail@example.com

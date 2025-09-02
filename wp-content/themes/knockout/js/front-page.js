@@ -212,54 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Form submissions with basic validation
-    const contactForm = document.getElementById('contact-form');
-
-    function handleFormSubmission(form, successMessage) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Basic validation
-            const requiredFields = form.querySelectorAll('[required]');
-            let isValid = true;
-            
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    field.classList.add('error');
-                    isValid = false;
-                } else {
-                    field.classList.remove('error');
-                }
-            });
-            
-            if (isValid) {
-                // Show success message (in a real implementation, you'd submit to server)
-                alert(successMessage);
-                form.reset();
-            } else {
-                alert('Please fill in all required fields.');
-            }
-        });
-    }
-
-    if (contactForm) {
-        handleFormSubmission(contactForm, 'Thank you for your message! We\'ll get back to you soon.');
-    }
-
-    // Add loading states to buttons
-    const submitButtons = document.querySelectorAll('button[type="submit"]');
-    submitButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const originalText = this.textContent;
-            this.textContent = 'Processing...';
-            this.disabled = true;
-            
-            setTimeout(() => {
-                this.textContent = originalText;
-                this.disabled = false;
-            }, 2000);
-        });
-    });
+    // Contact form handling removed - handled in contact.php template
 
     // Events Carousel Functionality - New Scrolling Design
     const eventsCarouselWrapper = document.querySelector('.events-carousel-wrapper');

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Test</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #fff; 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+        .test-form { 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 30px; 
+            border-radius: 15px; 
+            border: 1px solid rgba(176, 209, 54, 0.3); 
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        label { 
+            display: block; 
+            color: #b0d136; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+        }
+        input, select, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            background: rgba(255, 255, 255, 0.1); 
+            border: 1px solid rgba(176, 209, 54, 0.3); 
+            border-radius: 8px; 
+            color: #fff; 
+            font-size: 16px; 
+        }
+        button { 
+            background: linear-gradient(45deg, #b0d136, #00d4ff); 
+            color: #fff; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            font-weight: bold; 
+        }
+        button:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 5px 15px rgba(176, 209, 54, 0.3); 
+        }
+        .instructions {
+            background: rgba(0, 123, 255, 0.1);
+            border: 1px solid rgba(0, 123, 255, 0.3);
+            color: #007bff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Real Contact Form Test</h1>
+    
+    <div class="instructions">
+        <h3>📋 Testing Instructions:</h3>
+        <ol>
+            <li><strong>Fill out this form</strong> with test data</li>
+            <li><strong>Click "Submit Test"</strong> - this will submit directly to your WordPress contact page</li>
+            <li><strong>You should see</strong> a success message and debug info on the contact page</li>
+            <li><strong>Check your email</strong> at junaidafju@gmail.com for the message</li>
+        </ol>
+        <p><strong>Note:</strong> This form submits directly to your WordPress contact form handler.</p>
+    </div>
+    
+    <form class="test-form" method="POST" action="http://knockout.test/contact/">
+        <h2>🎯 Contact Form Test Submission</h2>
+        
+        <div class="form-group">
+            <label for="contact_name">Name *</label>
+            <input type="text" id="contact_name" name="contact_name" value="Browser Test User" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="contact_email">Email *</label>
+            <input type="email" id="contact_email" name="contact_email" value="browsertest@example.com" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="contact_phone">Phone</label>
+            <input type="tel" id="contact_phone" name="contact_phone" value="555-BROWSER-TEST">
+        </div>
+        
+        <div class="form-group">
+            <label for="contact_subject">Subject</label>
+            <select id="contact_subject" name="contact_subject">
+                <option value="">Select Subject</option>
+                <option value="booking">Booking Inquiry</option>
+                <option value="event">Event Planning</option>
+                <option value="corporate">Corporate Events</option>
+                <option value="birthday">Birthday Parties</option>
+                <option value="general" selected>General Question</option>
+                <option value="feedback">Feedback</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="contact_message">Message *</label>
+            <textarea id="contact_message" name="contact_message" rows="5" required>This is a test message submitted through the real contact form test page. If you receive this, the contact form is working perfectly!</textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="contact_newsletter" checked style="width: auto; margin-right: 10px;">
+                Subscribe to newsletter for special offers and events
+            </label>
+        </div>
+        
+        <!-- We need to get the nonce from the actual contact page -->
+        <input type="hidden" name="contact_nonce" id="contact_nonce" value="">
+        
+        <button type="button" onclick="loadNonceAndSubmit()">Submit Test</button>
+    </form>
+    
+    <script>
+    function loadNonceAndSubmit() {
+        console.log('Loading nonce from contact page...');
+        
+        // Direct submission without CORS issues
+        console.log('Submitting form directly...');
+        
+        // Get nonce from WordPress
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://knockout.test/get-nonce.php', false); // Synchronous for simplicity
+        try {
+            xhr.send();
+            if (xhr.status === 200) {
+                const nonce = xhr.responseText.trim();
+                document.getElementById('contact_nonce').value = nonce;
+                console.log('Nonce obtained:', nonce);
+                
+                // Now submit the form
+                document.querySelector('.test-form').submit();
+            } else {
+                alert('Failed to get nonce. Submitting without nonce...');
+                document.querySelector('.test-form').submit();
+            }
+        } catch (error) {
+            alert('Error getting nonce: ' + error.message + '. Submitting without nonce...');
+            document.querySelector('.test-form').submit();
+        }
+    }
+    </script>
+    
+    <p style="margin-top: 30px;">
+        <a href="http://knockout.test/contact/" style="color: #b0d136;">🔗 Go to Actual Contact Page</a> | 
+        <a href="http://knockout.test/?clear_rate_limit=knockout" style="color: #00d4ff;">🔄 Clear Rate Limit</a>
+    </p>
+    
+</body>
+</html>

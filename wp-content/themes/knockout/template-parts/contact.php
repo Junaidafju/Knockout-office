@@ -9,63 +9,68 @@
 $success_message = '';
 $error_message = '';
 $debug_info = '';
+$form_submitted = false;
 
-// Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    error_log('=== PHP FORM PROCESSING STARTED ===');
-    error_log('POST method detected');
-    error_log('POST data count: ' . count($_POST));
-    error_log('POST data: ' . print_r($_POST, true));
+// Check if form was processed by the global handler
+$global_result = knockout_get_contact_form_result();
+
+// Handle form submission (try both global result and direct processing)
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_name'])) {
+    error_log('=== KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===');
+    $form_submitted = true;
     
-    if (isset($_POST['contact_name']) && !empty($_POST['contact_name'])) {
-        error_log('Contact name found, processing form...');
-        
-        // Debug information
-        $debug_info = "Form submitted successfully!\n";
-        $debug_info .= "POST data received: " . count($_POST) . " fields\n";
-        
-        // Get form data
-        $name = isset($_POST['contact_name']) ? sanitize_text_field($_POST['contact_name']) : '';
-        $email = isset($_POST['contact_email']) ? sanitize_email($_POST['contact_email']) : '';
-        $phone = isset($_POST['contact_phone']) ? sanitize_text_field($_POST['contact_phone']) : '';
-        $subject = isset($_POST['contact_subject']) ? sanitize_text_field($_POST['contact_subject']) : '';
-        $message = isset($_POST['contact_message']) ? sanitize_textarea_field($_POST['contact_message']) : '';
-        $newsletter = isset($_POST['contact_newsletter']) ? 'Yes' : 'No';
-        
-        error_log("Form data extracted - Name: $name, Email: $email, Subject: $subject");
-        
-        // Basic validation
-        if (empty($name) || empty($email) || empty($message)) {
-            $error_message = 'Please fill in all required fields.';
-            $debug_info .= "Validation failed: Missing required fields\n";
-            error_log('Validation failed: Missing required fields');
-        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $error_message = 'Please enter a valid email address.';
-            $debug_info .= "Validation failed: Invalid email format\n";
-            error_log('Validation failed: Invalid email format');
-        } else {
-            // Success - form data is valid
-            $success_message = 'Thank you! Your message has been received successfully. We will get back to you soon.';
-            $debug_info .= "Form validation passed\n";
-            $debug_info .= "Name: $name\n";
-            $debug_info .= "Email: $email\n";
-            $debug_info .= "Subject: $subject\n";
-            $debug_info .= "Newsletter: $newsletter\n";
+    $result = null;
+    
+    // First, try to get result from global handler
+    if ($global_result) {
+        $result = $global_result;
+        error_log('Using global contact form result');
+    } else {
+        // Fallback: process directly in template
+        error_log('Processing contact form directly in template');
+        $result = knockout_handle_contact_form();
+    }
+    
+    if ($result) {
+        if (isset($result['success'])) {
+            $success_message = $result['success'];
+            $debug_info = "✅ Email sent successfully to junaidafju@gmail.com\n";
+            $debug_info .= "📧 Auto-reply sent to user\n";
+            $debug_info .= "⏰ Rate limiting applied\n";
+            $debug_info .= "🕒 Time: " . current_time('H:i:s') . "\n";
             
-            error_log('Form validation passed, setting success message');
+            // Store form data before clearing (for display purposes)
+            $submitted_data = $_POST;
             
-            // In Laragon development, we can't send real emails
-            // But we can log the data and show success message
-            error_log("Contact Form Submission - Name: $name, Email: $email, Subject: $subject");
-            
-            // Clear form data after successful submission
+            // Clear form data after successful submission to prevent resubmission
             $_POST = array();
+        } elseif (isset($result['error'])) {
+            $error_message = $result['error'];
+            $debug_info = "❌ Email sending failed\n";
+            $debug_info .= "Error: " . $result['error'] . "\n";
+            $debug_info .= "🕒 Time: " . current_time('H:i:s') . "\n";
         }
     } else {
-        error_log('No contact_name in POST data');
-        $debug_info = "Form submitted but no name field found\n";
-        $debug_info .= "POST data received: " . count($_POST) . " fields\n";
-        $debug_info .= "POST keys: " . implode(', ', array_keys($_POST)) . "\n";
+        $error_message = 'Form processing failed - no result returned.';
+        $debug_info = "❌ No result from form handler\n";
+        $debug_info .= "🕒 Time: " . current_time('H:i:s') . "\n";
+    }
+} elseif ($global_result) {
+    // Handle case where global result exists but POST data was cleared
+    $form_submitted = true;
+    $result = $global_result;
+    
+    if (isset($result['success'])) {
+        $success_message = $result['success'];
+        $debug_info = "✅ Email sent successfully (via global handler)\n";
+        $debug_info .= "📧 Auto-reply sent to user\n";
+        $debug_info .= "⏰ Rate limiting applied\n";
+        $debug_info .= "🕒 Time: " . current_time('H:i:s') . "\n";
+    } elseif (isset($result['error'])) {
+        $error_message = $result['error'];
+        $debug_info = "❌ Email sending failed (via global handler)\n";
+        $debug_info .= "Error: " . $result['error'] . "\n";
+        $debug_info .= "🕒 Time: " . current_time('H:i:s') . "\n";
     }
 }
 ?>
@@ -75,96 +80,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   type="module"
 ></script>
 
+<!-- Contact Form JavaScript - Simple logging only -->
 <script>
-// Wrap everything in error handling to prevent conflicts
 (function() {
     'use strict';
     
-    // Wait for DOM to be ready
     function initContactForm() {
-        try {
-            console.log('=== CONTACT FORM PAGE LOADED ===');
-            console.log('DOM Content Loaded event fired');
-            
-            // Test if we can find basic elements
-            console.log('Testing element selection...');
-            console.log('Contact form found:', !!document.getElementById('contact-form'));
-            console.log('Submit button found:', !!document.querySelector('button[type="submit"]'));
-            console.log('Form inputs found:', document.querySelectorAll('input, select, textarea').length);
-            
-            // Ensure neon checkbox functionality
-            const neonCheckboxes = document.querySelectorAll('.neon-checkbox input[type="checkbox"]');
-            
-            neonCheckboxes.forEach((checkbox) => {
-                try {
-                    // Add click event to the label for better UX
-                    const label = checkbox.closest('.checkbox-label');
-                    if (label) {
-                        label.addEventListener('click', function(e) {
-                            // Only handle clicks on the label text, not on the checkbox itself
-                            if (e.target.classList.contains('checkbox-text')) {
-                                checkbox.checked = !checkbox.checked;
-                                checkbox.dispatchEvent(new Event('change'));
-                            }
-                        });
-                    }
-                    
-                    // Ensure checkbox change events trigger properly
-                    checkbox.addEventListener('change', function() {
-                        console.log('Checkbox changed:', this.checked);
-                    });
-                } catch (checkboxError) {
-                    console.error('Error setting up checkbox:', checkboxError);
-                }
-            });
-    
-    // Contact form submission handling
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        console.log('Contact form found, adding submit listener');
+        console.log('=== CONTACT FORM LOADED ===');
         
-                    // Simple logging only - let form submit naturally
-            try {
-                console.log('Setting up form logging...');
-                
-                // Just log the form submission, don't intercept
-                contactForm.addEventListener('submit', function(e) {
-                    console.log('=== FORM SUBMITTING NATURALLY ===');
-                    console.log('Form will submit to PHP and refresh page');
-                    
-                    // Show loading state briefly
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    if (submitBtn) {
-                        submitBtn.textContent = 'Sending...';
-                        submitBtn.disabled = true;
-                    }
-                    
-                    // Let the form submit normally - no preventDefault()
-                    console.log('Allowing natural form submission...');
-                });
-                console.log('Form logging listener added');
-                
-            } catch (error) {
-                console.error('Error adding logging listener:', error);
-            }
-    } else {
-        console.error('Contact form not found!');
+        // Simple logging for form submission - NO INTERFERENCE
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                console.log('=== FORM SUBMITTING NATURALLY ===');
+                console.log('Form will submit to PHP and process naturally');
+                // No preventDefault(), no button manipulation - pure natural submission
+            });
+        }
     }
     
-    // Form submission is now handled naturally by PHP
-    console.log('Form will submit naturally to PHP');
-    
-    // Initialize the contact form
-    initContactForm();
-    
-    // Also try to initialize when DOM is ready
+    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initContactForm);
     } else {
-        // DOM is already ready
         initContactForm();
     }
-    
 })();
 </script>
 
@@ -218,7 +158,7 @@ function testFormSubmission() {
                     </div>
                     <h3>Visit Us</h3>
                     <p>RDB Cinemas, Salt Lake,<br>Sector 5, Kolkata, West Bengal<br>Zip code: 700135</p>
-                    <button type="button" class="glow-on-hover" onclick="window.open('https://maps.app.goo.gl/Ub8dW7vTtQfEDYf37)">
+                    <button type="button" class="glow-on-hover" onclick="window.open('https://maps.app.goo.gl/Ub8dW7vTtQfEDYf37')">
                         Get Directions
                     </button>
                 </div>
@@ -253,33 +193,55 @@ function testFormSubmission() {
                         ></dotlottie-wc>
                     </div>
                     <h3>Email Us</h3>
-                    <p><a href="mailto:info@knockout.com">info@knockout.com</a></p>
+                    <p><a href="mailto:junaidafju@gmail.com">junaidafju@gmail.com</a></p>
                     <p class="contact-note">We'll respond within 24 hours</p>
                 </div>
             </div>
             
             <div class="contact-form-wrapper">
+                <!-- FORM STATUS DISPLAY -->
+                <?php if ($form_submitted): ?>
+                    <div class="form-message debug" style="background: rgba(255, 255, 0, 0.1); border: 2px solid #ffff00; color: #ffff00; font-size: 16px; padding: 20px; margin: 20px 0;">
+                        <h3>🚀 FORM WAS SUBMITTED!</h3>
+                        <p>The form processing has been triggered. Check below for results.</p>
+                    </div>
+                <?php endif; ?>
+                
                 <!-- Debug Information for Laragon Development -->
                 <?php if ($debug_info): ?>
-                    <div class="form-message debug">
+                    <div class="form-message debug" style="background: rgba(0, 123, 255, 0.2); border: 2px solid #007bff; color: #007bff; font-size: 14px; padding: 20px; margin: 20px 0;">
                         <h4>🔍 Debug Information (Laragon Development)</h4>
                         <pre><?php echo esc_html($debug_info); ?></pre>
                     </div>
                 <?php endif; ?>
                 
                 <?php if ($success_message): ?>
-                    <div class="form-message success">
+                    <div class="form-message success" style="background: rgba(0, 255, 0, 0.2); border: 2px solid #00ff00; color: #00ff00; font-size: 18px; padding: 20px; margin: 20px 0; text-align: center;">
+                        <h3>🎉 SUCCESS!</h3>
                         <p><?php echo esc_html($success_message); ?></p>
                     </div>
                 <?php endif; ?>
                 
                 <?php if ($error_message): ?>
-                    <div class="form-message error">
+                    <div class="form-message error" style="background: rgba(255, 0, 0, 0.2); border: 2px solid #ff4444; color: #ff4444; font-size: 18px; padding: 20px; margin: 20px 0; text-align: center;">
+                        <h3>❌ ERROR!</h3>
                         <p><?php echo esc_html($error_message); ?></p>
                     </div>
                 <?php endif; ?>
                 
+                <!-- Always show form status for debugging -->
+                <div class="form-message debug" style="background: rgba(128, 128, 128, 0.1); border: 1px solid #888; color: #ccc; font-size: 12px; padding: 10px; margin: 10px 0;">
+                    <strong>Form Status Debug:</strong><br>
+                    Request Method: <?php echo $_SERVER['REQUEST_METHOD']; ?><br>
+                    Form Submitted: <?php echo $form_submitted ? 'YES' : 'NO'; ?><br>
+                    Success Message: <?php echo $success_message ? 'SET' : 'EMPTY'; ?><br>
+                    Error Message: <?php echo $error_message ? 'SET' : 'EMPTY'; ?><br>
+                    Debug Info: <?php echo $debug_info ? 'SET' : 'EMPTY'; ?><br>
+                    Current Time: <?php echo current_time('H:i:s'); ?><br>
+                </div>
+                
                 <form class="contact-form" id="contact-form" method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
+                    <?php wp_nonce_field('knockout_contact_form', 'contact_nonce'); ?>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="contact-name">Name *</label>
