@@ -5694,3 +5694,2769 @@
 [02-Sep-2025 12:54:45 UTC] Contact form email sent successfully to: junaidafju@gmail.com
 [02-Sep-2025 12:54:45 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
 [02-Sep-2025 12:54:45 UTC] Using global contact form result
+[03-Sep-2025 05:35:27 UTC] Automatic updates starting...
+[03-Sep-2025 05:35:29 UTC]   Automatic plugin updates starting...
+[03-Sep-2025 05:35:29 UTC]   Automatic plugin updates complete.
+[03-Sep-2025 05:35:30 UTC] Automatic updates complete.
+[03-Sep-2025 05:44:01 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 05:44:01 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 05:44:01 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 05:44:01 UTC] Contact form submission detected
+[03-Sep-2025 05:44:01 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 05:44:01 UTC] From user: afrin.jamal2001@gmail.com (junaid akhtar)
+[03-Sep-2025 05:44:01 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 05:44:01 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 98e67ed59e1d1-3276fce1f30sm21700841a91.23 - gsmtp
+
+[03-Sep-2025 05:44:01 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:44:02 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:44:02 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 05:44:02 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 05:44:02 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:44:03 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:44:03 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 05:44:03 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 05:44:03 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:44:03 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 05:44:03 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:44:03 UTC] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3276fce1f30sm21700841a91.23 - gsmtp
+
+[03-Sep-2025 05:44:03 UTC] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3276fce1f30sm21700841a91.23 - gsmtp
+
+[03-Sep-2025 05:44:03 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:44:03 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 05:44:04 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection 98e67ed59e1d1-3276fce1f30sm21700841a91.23 - gsmtp
+
+[03-Sep-2025 05:44:04 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:44:04 UTC] Failed to send contact form email
+[03-Sep-2025 05:44:04 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 05:44:04 UTC] Using global contact form result
+[03-Sep-2025 05:44:23 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 05:44:23 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 05:44:23 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 05:44:23 UTC] Contact form submission detected
+[03-Sep-2025 05:44:23 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 05:44:23 UTC] From user: afrin.jamal2001@gmail.com (junaid akhtar)
+[03-Sep-2025 05:44:23 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 05:44:24 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-24905da1879sm150018255ad.87 - gsmtp
+
+[03-Sep-2025 05:44:24 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:44:24 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:44:24 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 05:44:24 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 05:44:24 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:44:25 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:44:25 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 05:44:25 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 05:44:25 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:44:25 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 05:44:25 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:44:25 UTC] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24905da1879sm150018255ad.87 - gsmtp
+
+[03-Sep-2025 05:44:25 UTC] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24905da1879sm150018255ad.87 - gsmtp
+
+[03-Sep-2025 05:44:25 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:44:25 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 05:44:26 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-24905da1879sm150018255ad.87 - gsmtp
+
+[03-Sep-2025 05:44:26 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:44:26 UTC] Failed to send contact form email
+[03-Sep-2025 05:44:26 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 05:44:26 UTC] Using global contact form result
+[03-Sep-2025 05:44:36 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 05:44:36 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 05:44:36 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 05:44:36 UTC] Contact form submission detected
+[03-Sep-2025 05:44:36 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 05:44:36 UTC] From user: afrin.jamal2001@gmail.com (junaid akhtar)
+[03-Sep-2025 05:44:36 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 05:44:36 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-24c180f82cbsm22609035ad.100 - gsmtp
+
+[03-Sep-2025 05:44:36 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:44:36 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:44:36 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 05:44:37 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 05:44:37 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:44:37 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:44:37 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 05:44:37 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 05:44:37 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:44:37 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 05:44:37 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:44:38 UTC] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24c180f82cbsm22609035ad.100 - gsmtp
+
+[03-Sep-2025 05:44:38 UTC] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24c180f82cbsm22609035ad.100 - gsmtp
+
+[03-Sep-2025 05:44:38 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:44:38 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 05:44:38 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-24c180f82cbsm22609035ad.100 - gsmtp
+
+[03-Sep-2025 05:44:38 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:44:38 UTC] Failed to send contact form email
+[03-Sep-2025 05:44:38 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 05:44:38 UTC] Using global contact form result
+[03-Sep-2025 05:46:10 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 05:46:10 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 05:46:10 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 05:46:10 UTC] Contact form submission detected
+[03-Sep-2025 05:46:10 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 05:46:10 UTC] From user: afrin.jamal2001@example.com (junaid akhtar)
+[03-Sep-2025 05:46:10 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 05:46:11 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d2e1a72fcca58-7722a090c77sm15237967b3a.0 - gsmtp
+
+[03-Sep-2025 05:46:11 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:46:11 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:46:11 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 05:46:12 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 05:46:12 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:46:12 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:46:12 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 05:46:12 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 05:46:12 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:46:12 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 05:46:12 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:46:13 UTC] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7722a090c77sm15237967b3a.0 - gsmtp
+
+[03-Sep-2025 05:46:13 UTC] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7722a090c77sm15237967b3a.0 - gsmtp
+
+[03-Sep-2025 05:46:13 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:46:13 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 05:46:13 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d2e1a72fcca58-7722a090c77sm15237967b3a.0 - gsmtp
+
+[03-Sep-2025 05:46:13 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:46:13 UTC] Failed to send contact form email
+[03-Sep-2025 05:46:13 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 05:46:13 UTC] Using global contact form result
+[03-Sep-2025 05:47:02 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 05:47:02 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 05:47:02 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 05:47:02 UTC] Contact form submission detected
+[03-Sep-2025 05:47:02 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 05:47:02 UTC] From user: afrin.jamal2001@example.com (junaid akhtar)
+[03-Sep-2025 05:47:02 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 05:47:03 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 98e67ed59e1d1-3299739e0aesm9030316a91.8 - gsmtp
+
+[03-Sep-2025 05:47:03 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:47:03 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:47:03 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 05:47:03 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 05:47:03 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 05:47:03 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 05:47:03 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 05:47:04 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 05:47:04 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:47:04 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 05:47:04 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 05:47:04 UTC] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3299739e0aesm9030316a91.8 - gsmtp
+
+[03-Sep-2025 05:47:04 UTC] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3299739e0aesm9030316a91.8 - gsmtp
+
+[03-Sep-2025 05:47:04 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:47:04 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 05:47:04 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection 98e67ed59e1d1-3299739e0aesm9030316a91.8 - gsmtp
+
+[03-Sep-2025 05:47:04 UTC] SMTP Error: Could not authenticate.
+[03-Sep-2025 05:47:04 UTC] Failed to send contact form email
+[03-Sep-2025 05:47:04 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 05:47:04 UTC] Using global contact form result
+[03-Sep-2025 06:05:31 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 06:05:31 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 06:05:31 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 06:05:31 UTC] Contact form submission detected
+[03-Sep-2025 06:05:31 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 06:05:31 UTC] From user: afrin.jamal2001@example.com (junaid akhtar)
+[03-Sep-2025 06:05:31 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 06:05:32 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-24b020a7cb5sm47402065ad.115 - gsmtp
+
+[03-Sep-2025 06:05:32 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:05:32 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:05:32 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 06:05:32 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 06:05:32 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:05:33 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:05:33 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 06:05:33 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 06:05:33 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:05:33 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 06:05:33 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:05:34 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 06:05:34 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:05:34 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-24b020a7cb5sm47402065ad.115 - gsmtp
+
+[03-Sep-2025 06:05:34 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:05:34 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-24b020a7cb5sm47402065ad.115 - gsmtp
+
+[03-Sep-2025 06:05:34 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 06:05:35 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-24b020a7cb5sm47402065ad.115 - gsmtp
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 06:05:31 +0000
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: Reply-To: junaid akhtar <afrin.jamal2001@example.com>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: Subject: New Contact Form Submission from KnockOut
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: Message-ID: <W8cpqP3ORDN3a77b2zQhNn3SBaNz0csg4vRzV4qqG7o@knockout.test>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:         <title>New Contact Form Submission</title>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             .field { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #b0d136; }
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             .field strong { color: #333; }
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> New Contact Form Submission</h1>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <strong>Name:</strong> junaid akhtar
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <strong>Email:</strong> <a href="mailto:afrin.jamal2001@example.com">afrin.jamal2001@example.com</a>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="field"><strong>Phone:</strong> 8948240252</div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="field"><strong>Subject:</strong> Corporate</div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <strong>Message:</strong><br>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 scddsg dfb
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <strong>Newsletter Subscription:</strong> Yes
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <p><strong>Submission Details:</strong></p>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 <p>Time: 2025-09-03 06:05:31<br>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 IP Address: 127.0.0.1<br>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:                 Website: <a href="http://knockout.test">KnockOut</a></p>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:05:35 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 06:05:36 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756879536 d9443c01a7336-24b020a7cb5sm47402065ad.115 - gsmtp
+
+[03-Sep-2025 06:05:36 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 06:05:36 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-24b020a7cb5sm47402065ad.115 - gsmtp
+
+[03-Sep-2025 06:05:36 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-24903705b91sm151355665ad.12 - gsmtp
+
+[03-Sep-2025 06:05:36 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:05:36 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:05:36 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 06:05:37 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 06:05:37 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:05:37 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:05:37 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 06:05:37 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 06:05:37 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:05:37 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 06:05:37 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:05:38 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 06:05:38 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:05:38 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-24903705b91sm151355665ad.12 - gsmtp
+
+[03-Sep-2025 06:05:38 UTC] CLIENT -> SERVER: RCPT TO:<afrin.jamal2001@example.com>
+
+[03-Sep-2025 06:05:38 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-24903705b91sm151355665ad.12 - gsmtp
+
+[03-Sep-2025 06:05:38 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 06:05:39 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-24903705b91sm151355665ad.12 - gsmtp
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 06:05:36 +0000
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: To: afrin.jamal2001@example.com
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: Subject: Thank you for contacting KnockOut
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: Message-ID: <eF8SGeaZwPnTuh64rWu02LKFmOzcrhdHRhmk69Adin8@knockout.test>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:         <title>Thank You for Contacting Us</title>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             .content { margin-bottom: 20px; }
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center; }
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Thank You, junaid akhtar!</h1>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             <div class="content">
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p>Hi junaid akhtar,</p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p>Thank you for reaching out to us! We have successfully received your message and our team will get back to you within 24 hours.</p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p>In the meantime, feel free to:</p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <ul>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Book a lane for bowling</li>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f355.png" alt="🍕" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Check out our delicious menu</li>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3ae.png" alt="🎮" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Explore our e-sports arena</li>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4f8.png" alt="📸" class="wp-smiley" style="height: 1em; max-height: 1em;" /> View our gallery</li>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 </ul>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p>We look forward to seeing you at KnockOut!</p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p>Best regards,<br>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 The KnockOut Team</p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4cd.png" alt="📍" class="wp-smiley" style="height: 1em; max-height: 1em;" /> RDB Cinemas, Salt Lake, Sector 5, Kolkata, West Bengal (700135)<br>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4de.png" alt="📞" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (555) 123-BOWL | <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4e7.png" alt="📧" class="wp-smiley" style="height: 1em; max-height: 1em;" /> junaidafju@gmail.com</p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:                 <p><em>This is an automated message. Please do not reply to this email.</em></p>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 06:05:39 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756879540 d9443c01a7336-24903705b91sm151355665ad.12 - gsmtp
+
+[03-Sep-2025 06:05:39 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 06:05:40 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-24903705b91sm151355665ad.12 - gsmtp
+
+[03-Sep-2025 06:05:40 UTC] Contact form email sent successfully to: junaidafju@gmail.com
+[03-Sep-2025 06:05:40 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 06:05:40 UTC] Using global contact form result
+[03-Sep-2025 06:22:01 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 06:22:01 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 06:22:01 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 06:22:01 UTC] Contact form submission detected
+[03-Sep-2025 06:22:01 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 06:22:01 UTC] From user: afrin.jamal2001@gmail.com (junaid akhtar)
+[03-Sep-2025 06:22:01 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 06:22:01 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-24b11833a47sm41816835ad.53 - gsmtp
+
+[03-Sep-2025 06:22:01 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:22:02 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:22:02 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 06:22:02 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 06:22:02 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:22:02 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:22:02 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 06:22:02 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 06:22:02 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:22:03 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 06:22:03 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:22:03 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 06:22:03 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:22:03 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-24b11833a47sm41816835ad.53 - gsmtp
+
+[03-Sep-2025 06:22:03 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:22:04 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-24b11833a47sm41816835ad.53 - gsmtp
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 06:22:04 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-24b11833a47sm41816835ad.53 - gsmtp
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 06:22:01 +0000
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: Reply-To: junaid akhtar <afrin.jamal2001@gmail.com>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: Subject: New Contact Form Submission from KnockOut
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: Message-ID: <dOSlAzVKg0J9kom61DyU7WtK8WyRMj1jHndMz9KiHfY@knockout.test>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:         <title>New Contact Form Submission</title>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             .field { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #b0d136; }
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             .field strong { color: #333; }
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> New Contact Form Submission</h1>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <strong>Name:</strong> junaid akhtar
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <strong>Email:</strong> <a href="mailto:afrin.jamal2001@gmail.com">afrin.jamal2001@gmail.com</a>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="field"><strong>Phone:</strong> 08948240252</div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="field"><strong>Subject:</strong> Corporate</div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <strong>Message:</strong><br>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 dwfcdwvf sdvf
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <strong>Newsletter Subscription:</strong> Yes
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <p><strong>Submission Details:</strong></p>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 <p>Time: 2025-09-03 06:22:01<br>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 IP Address: 127.0.0.1<br>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:                 Website: <a href="http://knockout.test">KnockOut</a></p>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:22:04 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 06:22:05 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756880525 d9443c01a7336-24b11833a47sm41816835ad.53 - gsmtp
+
+[03-Sep-2025 06:22:05 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 06:22:05 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-24b11833a47sm41816835ad.53 - gsmtp
+
+[03-Sep-2025 06:22:06 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d2e1a72fcca58-7722a4fe18asm15667521b3a.95 - gsmtp
+
+[03-Sep-2025 06:22:06 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:22:06 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:22:06 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 06:22:06 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 06:22:06 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 06:22:07 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:22:07 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 06:22:07 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 06:22:07 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:22:07 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 06:22:07 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:22:08 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:22:08 UTC] SERVER -> CLIENT: 250 2.1.0 OK d2e1a72fcca58-7722a4fe18asm15667521b3a.95 - gsmtp
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: RCPT TO:<afrin.jamal2001@gmail.com>
+
+[03-Sep-2025 06:22:08 UTC] SERVER -> CLIENT: 250 2.1.5 OK d2e1a72fcca58-7722a4fe18asm15667521b3a.95 - gsmtp
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 06:22:08 UTC] SERVER -> CLIENT: 354 Go ahead d2e1a72fcca58-7722a4fe18asm15667521b3a.95 - gsmtp
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 06:22:05 +0000
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: To: afrin.jamal2001@gmail.com
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: Subject: Thank you for contacting KnockOut
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: Message-ID: <fPkovHyqboqEIwILOntVhF5aDCo14lkjCY6b5JgkzY@knockout.test>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:         <title>Thank You for Contacting Us</title>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             .content { margin-bottom: 20px; }
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center; }
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Thank You, junaid akhtar!</h1>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             <div class="content">
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p>Hi junaid akhtar,</p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p>Thank you for reaching out to us! We have successfully received your message and our team will get back to you within 24 hours.</p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p>In the meantime, feel free to:</p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <ul>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Book a lane for bowling</li>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f355.png" alt="🍕" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Check out our delicious menu</li>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3ae.png" alt="🎮" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Explore our e-sports arena</li>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4f8.png" alt="📸" class="wp-smiley" style="height: 1em; max-height: 1em;" /> View our gallery</li>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 </ul>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p>We look forward to seeing you at KnockOut!</p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p>Best regards,<br>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 The KnockOut Team</p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4cd.png" alt="📍" class="wp-smiley" style="height: 1em; max-height: 1em;" /> RDB Cinemas, Salt Lake, Sector 5, Kolkata, West Bengal (700135)<br>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4de.png" alt="📞" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (555) 123-BOWL | <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4e7.png" alt="📧" class="wp-smiley" style="height: 1em; max-height: 1em;" /> junaidafju@gmail.com</p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:                 <p><em>This is an automated message. Please do not reply to this email.</em></p>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:22:08 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 06:22:09 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756880530 d2e1a72fcca58-7722a4fe18asm15667521b3a.95 - gsmtp
+
+[03-Sep-2025 06:22:09 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 06:22:09 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d2e1a72fcca58-7722a4fe18asm15667521b3a.95 - gsmtp
+
+[03-Sep-2025 06:22:09 UTC] Contact form email sent successfully to: junaidafju@gmail.com
+[03-Sep-2025 06:22:10 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 06:22:10 UTC] Using global contact form result
+[03-Sep-2025 06:37:04 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d2e1a72fcca58-7722a4b99fasm15749959b3a.57 - gsmtp
+
+[03-Sep-2025 06:37:04 UTC] CLIENT -> SERVER: EHLO junaid-knockout.test
+
+[03-Sep-2025 06:37:04 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:37:04 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 06:37:04 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 06:37:04 UTC] CLIENT -> SERVER: EHLO junaid-knockout.test
+
+[03-Sep-2025 06:37:05 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 06:37:05 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 06:37:05 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 06:37:05 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:37:05 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 06:37:05 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 06:37:06 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:37:06 UTC] SERVER -> CLIENT: 250 2.1.0 OK d2e1a72fcca58-7722a4b99fasm15749959b3a.57 - gsmtp
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 06:37:06 UTC] SERVER -> CLIENT: 250 2.1.5 OK d2e1a72fcca58-7722a4b99fasm15749959b3a.57 - gsmtp
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 06:37:06 UTC] SERVER -> CLIENT: 354 Go ahead d2e1a72fcca58-7722a4b99fasm15749959b3a.57 - gsmtp
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 06:37:03 +0000
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: Subject: SMTP Test from KnockOut - 2025-09-03 06:37:03
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: Message-ID: <Ipg6XAn0q9zBTnW01Egribv8mxKl2nMb38Pu9m9LZDk@junaid-knockout.test>
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: This is a test email to verify SMTP configuration is working correctly.
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 06:37:06 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 06:37:07 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756881428 d2e1a72fcca58-7722a4b99fasm15749959b3a.57 - gsmtp
+
+[03-Sep-2025 06:37:07 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 06:37:08 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d2e1a72fcca58-7722a4b99fasm15749959b3a.57 - gsmtp
+
+[03-Sep-2025 07:19:33 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 07:19:33 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 07:19:33 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 07:19:33 UTC] Contact form submission detected
+[03-Sep-2025 07:19:33 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 07:19:33 UTC] From user: afrin.jamal2001@gmail.com (junaid akhtar)
+[03-Sep-2025 07:19:33 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 07:19:33 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d2e1a72fcca58-7725b974350sm7902005b3a.72 - gsmtp
+
+[03-Sep-2025 07:19:33 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:19:34 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:19:34 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 07:19:34 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 07:19:34 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:19:34 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:19:34 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 07:19:35 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 07:19:35 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:19:35 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 07:19:35 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:19:35 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 07:19:35 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:19:35 UTC] SERVER -> CLIENT: 250 2.1.0 OK d2e1a72fcca58-7725b974350sm7902005b3a.72 - gsmtp
+
+[03-Sep-2025 07:19:35 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:19:36 UTC] SERVER -> CLIENT: 250 2.1.5 OK d2e1a72fcca58-7725b974350sm7902005b3a.72 - gsmtp
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 07:19:36 UTC] SERVER -> CLIENT: 354 Go ahead d2e1a72fcca58-7725b974350sm7902005b3a.72 - gsmtp
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 07:19:33 +0000
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: Reply-To: junaid akhtar <afrin.jamal2001@gmail.com>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: Subject: New Contact Form Submission from KnockOut
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: Message-ID: <Lp3I4HqIikZn8yuUjL4yoTPUmGKoKxEiLIeMyhpFf0@knockout.test>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:         <title>New Contact Form Submission</title>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             .field { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #b0d136; }
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             .field strong { color: #333; }
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> New Contact Form Submission</h1>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <strong>Name:</strong> junaid akhtar
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <strong>Email:</strong> <a href="mailto:afrin.jamal2001@gmail.com">afrin.jamal2001@gmail.com</a>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="field"><strong>Phone:</strong> 08948240252</div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="field"><strong>Subject:</strong> Corporate</div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <strong>Message:</strong><br>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 dwfcdwvf sdvf
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <strong>Newsletter Subscription:</strong> Yes
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <p><strong>Submission Details:</strong></p>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 <p>Time: 2025-09-03 07:19:33<br>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 IP Address: 127.0.0.1<br>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:                 Website: <a href="http://knockout.test">KnockOut</a></p>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:19:36 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 07:19:37 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756883978 d2e1a72fcca58-7725b974350sm7902005b3a.72 - gsmtp
+
+[03-Sep-2025 07:19:37 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 07:19:37 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d2e1a72fcca58-7725b974350sm7902005b3a.72 - gsmtp
+
+[03-Sep-2025 07:19:38 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 98e67ed59e1d1-32b747c2d66sm180606a91.28 - gsmtp
+
+[03-Sep-2025 07:19:38 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:19:38 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:19:38 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 07:19:38 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 07:19:38 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:19:39 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:19:39 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 07:19:39 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 07:19:39 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:19:39 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 07:19:39 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:19:40 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 07:19:40 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:19:40 UTC] SERVER -> CLIENT: 250 2.1.0 OK 98e67ed59e1d1-32b747c2d66sm180606a91.28 - gsmtp
+
+[03-Sep-2025 07:19:40 UTC] CLIENT -> SERVER: RCPT TO:<afrin.jamal2001@gmail.com>
+
+[03-Sep-2025 07:19:40 UTC] SERVER -> CLIENT: 250 2.1.5 OK 98e67ed59e1d1-32b747c2d66sm180606a91.28 - gsmtp
+
+[03-Sep-2025 07:19:40 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 07:19:41 UTC] SERVER -> CLIENT: 354 Go ahead 98e67ed59e1d1-32b747c2d66sm180606a91.28 - gsmtp
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 07:19:37 +0000
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: To: afrin.jamal2001@gmail.com
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: Subject: Thank you for contacting KnockOut
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: Message-ID: <RfCwJbBUVa0r8FaeTFrIk7ULjXBGsSt5F9EhvwM@knockout.test>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:         <title>Thank You for Contacting Us</title>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             .content { margin-bottom: 20px; }
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center; }
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Thank You, junaid akhtar!</h1>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             <div class="content">
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p>Hi junaid akhtar,</p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p>Thank you for reaching out to us! We have successfully received your message and our team will get back to you within 24 hours.</p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p>In the meantime, feel free to:</p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <ul>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Book a lane for bowling</li>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f355.png" alt="🍕" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Check out our delicious menu</li>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3ae.png" alt="🎮" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Explore our e-sports arena</li>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4f8.png" alt="📸" class="wp-smiley" style="height: 1em; max-height: 1em;" /> View our gallery</li>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 </ul>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p>We look forward to seeing you at KnockOut!</p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p>Best regards,<br>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 The KnockOut Team</p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4cd.png" alt="📍" class="wp-smiley" style="height: 1em; max-height: 1em;" /> RDB Cinemas, Salt Lake, Sector 5, Kolkata, West Bengal (700135)<br>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4de.png" alt="📞" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (555) 123-BOWL | <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4e7.png" alt="📧" class="wp-smiley" style="height: 1em; max-height: 1em;" /> junaidafju@gmail.com</p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:                 <p><em>This is an automated message. Please do not reply to this email.</em></p>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 07:19:41 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756883982 98e67ed59e1d1-32b747c2d66sm180606a91.28 - gsmtp
+
+[03-Sep-2025 07:19:41 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 07:19:42 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection 98e67ed59e1d1-32b747c2d66sm180606a91.28 - gsmtp
+
+[03-Sep-2025 07:19:42 UTC] Contact form email sent successfully to: junaidafju@gmail.com
+[03-Sep-2025 07:19:42 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 07:19:42 UTC] Using global contact form result
+[03-Sep-2025 07:21:51 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 07:21:51 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 07:21:51 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 07:21:51 UTC] Contact form submission detected
+[03-Sep-2025 07:21:51 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 07:21:51 UTC] From user: SMARTYMUSKAN07@GMAIL.COM (jUNAID)
+[03-Sep-2025 07:21:51 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 07:21:51 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-24a956d9b7esm108425705ad.11 - gsmtp
+
+[03-Sep-2025 07:21:51 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:21:51 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:21:51 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 07:21:51 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 07:21:52 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:21:52 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:21:52 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 07:21:52 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 07:21:52 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:21:52 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 07:21:52 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:21:53 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 07:21:53 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:21:53 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-24a956d9b7esm108425705ad.11 - gsmtp
+
+[03-Sep-2025 07:21:53 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:21:53 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-24a956d9b7esm108425705ad.11 - gsmtp
+
+[03-Sep-2025 07:21:53 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 07:21:54 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-24a956d9b7esm108425705ad.11 - gsmtp
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 07:21:51 +0000
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: Reply-To: jUNAID <SMARTYMUSKAN07@GMAIL.COM>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: Subject: New Contact Form Submission from KnockOut
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: Message-ID: <vpHXS5JkJKuxbiwdYavOElGIUaIu5NxqetpYEjv7o8@knockout.test>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:         <title>New Contact Form Submission</title>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             .field { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #b0d136; }
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             .field strong { color: #333; }
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> New Contact Form Submission</h1>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <strong>Name:</strong> jUNAID
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <strong>Email:</strong> <a href="mailto:SMARTYMUSKAN07@GMAIL.COM">SMARTYMUSKAN07@GMAIL.COM</a>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="field"><strong>Phone:</strong> 8948240252</div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="field"><strong>Subject:</strong> Booking</div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <strong>Message:</strong><br>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 HELLOO
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <strong>Newsletter Subscription:</strong> Yes
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <p><strong>Submission Details:</strong></p>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 <p>Time: 2025-09-03 07:21:51<br>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 IP Address: 127.0.0.1<br>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:                 Website: <a href="http://knockout.test">KnockOut</a></p>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 07:21:54 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756884115 d9443c01a7336-24a956d9b7esm108425705ad.11 - gsmtp
+
+[03-Sep-2025 07:21:54 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 07:21:55 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-24a956d9b7esm108425705ad.11 - gsmtp
+
+[03-Sep-2025 07:21:55 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-24903727e23sm153863415ad.45 - gsmtp
+
+[03-Sep-2025 07:21:55 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:21:55 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:21:55 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 07:21:55 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 07:21:55 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:21:56 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:21:56 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 07:21:56 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 07:21:56 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:21:56 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 07:21:56 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:21:57 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 07:21:57 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:21:57 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-24903727e23sm153863415ad.45 - gsmtp
+
+[03-Sep-2025 07:21:57 UTC] CLIENT -> SERVER: RCPT TO:<SMARTYMUSKAN07@GMAIL.COM>
+
+[03-Sep-2025 07:21:57 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-24903727e23sm153863415ad.45 - gsmtp
+
+[03-Sep-2025 07:21:57 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 07:21:58 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-24903727e23sm153863415ad.45 - gsmtp
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 07:21:55 +0000
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: To: SMARTYMUSKAN07@GMAIL.COM
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: Subject: Thank you for contacting KnockOut
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: Message-ID: <tDim2smdVtCgEAFwkZDmW0xJIygCrNCmTE0GEEw2Gro@knockout.test>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:         <title>Thank You for Contacting Us</title>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             .content { margin-bottom: 20px; }
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center; }
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Thank You, jUNAID!</h1>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             <div class="content">
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p>Hi jUNAID,</p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p>Thank you for reaching out to us! We have successfully received your message and our team will get back to you within 24 hours.</p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p>In the meantime, feel free to:</p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <ul>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Book a lane for bowling</li>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f355.png" alt="🍕" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Check out our delicious menu</li>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3ae.png" alt="🎮" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Explore our e-sports arena</li>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4f8.png" alt="📸" class="wp-smiley" style="height: 1em; max-height: 1em;" /> View our gallery</li>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 </ul>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p>We look forward to seeing you at KnockOut!</p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p>Best regards,<br>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 The KnockOut Team</p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4cd.png" alt="📍" class="wp-smiley" style="height: 1em; max-height: 1em;" /> RDB Cinemas, Salt Lake, Sector 5, Kolkata, West Bengal (700135)<br>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4de.png" alt="📞" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (555) 123-BOWL | <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4e7.png" alt="📧" class="wp-smiley" style="height: 1em; max-height: 1em;" /> junaidafju@gmail.com</p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:                 <p><em>This is an automated message. Please do not reply to this email.</em></p>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 07:21:58 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756884119 d9443c01a7336-24903727e23sm153863415ad.45 - gsmtp
+
+[03-Sep-2025 07:21:58 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 07:21:59 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-24903727e23sm153863415ad.45 - gsmtp
+
+[03-Sep-2025 07:21:59 UTC] Contact form email sent successfully to: junaidafju@gmail.com
+[03-Sep-2025 07:21:59 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 07:21:59 UTC] Using global contact form result
+[03-Sep-2025 07:24:03 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 07:24:03 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 07:24:03 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 07:24:03 UTC] Contact form submission detected
+[03-Sep-2025 07:24:03 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 07:24:03 UTC] From user: afrin.jamal2001@gmail.com (junaid akhtar)
+[03-Sep-2025 07:24:03 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 07:24:03 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-249066e04e1sm152466805ad.142 - gsmtp
+
+[03-Sep-2025 07:24:03 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:24:04 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:24:04 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 07:24:04 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 07:24:04 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:24:04 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:24:04 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 07:24:05 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 07:24:05 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:24:05 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 07:24:05 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:24:05 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 07:24:05 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:24:06 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-249066e04e1sm152466805ad.142 - gsmtp
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:24:06 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-249066e04e1sm152466805ad.142 - gsmtp
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 07:24:06 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-249066e04e1sm152466805ad.142 - gsmtp
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 07:24:03 +0000
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: Reply-To: junaid akhtar <afrin.jamal2001@gmail.com>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: Subject: New Contact Form Submission from KnockOut
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: Message-ID: <XTQL6uJkGVYk8PvABK9L9HpvkMKLj4YaUHQH5ipiGhA@knockout.test>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:         <title>New Contact Form Submission</title>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             .field { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #b0d136; }
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             .field strong { color: #333; }
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> New Contact Form Submission</h1>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <strong>Name:</strong> junaid akhtar
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <strong>Email:</strong> <a href="mailto:afrin.jamal2001@gmail.com">afrin.jamal2001@gmail.com</a>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="field"><strong>Phone:</strong> 08948240252</div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="field"><strong>Subject:</strong> Event</div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <strong>Message:</strong><br>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 AFSDVF
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <strong>Newsletter Subscription:</strong> Yes
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <p><strong>Submission Details:</strong></p>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 <p>Time: 2025-09-03 07:24:03<br>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 IP Address: 127.0.0.1<br>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:                 Website: <a href="http://knockout.test">KnockOut</a></p>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:24:06 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 07:24:07 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756884247 d9443c01a7336-249066e04e1sm152466805ad.142 - gsmtp
+
+[03-Sep-2025 07:24:07 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 07:24:07 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-249066e04e1sm152466805ad.142 - gsmtp
+
+[03-Sep-2025 07:24:08 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-249065899f3sm149820655ad.113 - gsmtp
+
+[03-Sep-2025 07:24:08 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:24:08 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:24:08 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 07:24:08 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 07:24:08 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 07:24:08 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 07:24:08 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 07:24:09 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 07:24:09 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:24:09 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 07:24:09 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 07:24:09 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 07:24:09 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 07:24:10 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-249065899f3sm149820655ad.113 - gsmtp
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: RCPT TO:<afrin.jamal2001@gmail.com>
+
+[03-Sep-2025 07:24:10 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-249065899f3sm149820655ad.113 - gsmtp
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 07:24:10 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-249065899f3sm149820655ad.113 - gsmtp
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 07:24:07 +0000
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: To: afrin.jamal2001@gmail.com
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: Subject: Thank you for contacting KnockOut
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: Message-ID: <bByhJpKenShnMI08vCrvfyLwmFEmWJa4USudBitST3Q@knockout.test>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:         <title>Thank You for Contacting Us</title>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             .content { margin-bottom: 20px; }
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center; }
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Thank You, junaid akhtar!</h1>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             <div class="content">
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p>Hi junaid akhtar,</p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p>Thank you for reaching out to us! We have successfully received your message and our team will get back to you within 24 hours.</p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p>In the meantime, feel free to:</p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <ul>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Book a lane for bowling</li>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f355.png" alt="🍕" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Check out our delicious menu</li>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3ae.png" alt="🎮" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Explore our e-sports arena</li>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4f8.png" alt="📸" class="wp-smiley" style="height: 1em; max-height: 1em;" /> View our gallery</li>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 </ul>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p>We look forward to seeing you at KnockOut!</p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p>Best regards,<br>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 The KnockOut Team</p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4cd.png" alt="📍" class="wp-smiley" style="height: 1em; max-height: 1em;" /> RDB Cinemas, Salt Lake, Sector 5, Kolkata, West Bengal (700135)<br>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4de.png" alt="📞" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (555) 123-BOWL | <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4e7.png" alt="📧" class="wp-smiley" style="height: 1em; max-height: 1em;" /> junaidafju@gmail.com</p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:                 <p><em>This is an automated message. Please do not reply to this email.</em></p>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 07:24:10 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 07:24:11 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756884251 d9443c01a7336-249065899f3sm149820655ad.113 - gsmtp
+
+[03-Sep-2025 07:24:11 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 07:24:11 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-249065899f3sm149820655ad.113 - gsmtp
+
+[03-Sep-2025 07:24:11 UTC] Contact form email sent successfully to: junaidafju@gmail.com
+[03-Sep-2025 07:24:11 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 07:24:11 UTC] Using global contact form result
+[03-Sep-2025 09:37:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php:354
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php on line 354
+[03-Sep-2025 09:37:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php:354
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php on line 354
+[03-Sep-2025 09:38:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php:354
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php on line 354
+[03-Sep-2025 09:38:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php:354
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\Junaid-KnockOut\create-sample-posts.php on line 354
+[03-Sep-2025 09:49:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\laragon\www\Junaid-KnockOut\setup-blog.php:140
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\Junaid-KnockOut\setup-blog.php on line 140
+[03-Sep-2025 09:51:28 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 41be03b00d2f7-b4f8a0a2851sm6297670a12.37 - gsmtp
+
+[03-Sep-2025 09:51:28 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 09:51:29 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 09:51:29 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 09:51:29 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 09:51:29 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 09:51:29 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 09:51:29 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 09:51:29 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 09:51:29 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 09:51:30 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 09:51:30 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 09:51:30 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 09:51:30 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 09:51:31 UTC] SERVER -> CLIENT: 250 2.1.0 OK 41be03b00d2f7-b4f8a0a2851sm6297670a12.37 - gsmtp
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 09:51:31 UTC] SERVER -> CLIENT: 250 2.1.5 OK 41be03b00d2f7-b4f8a0a2851sm6297670a12.37 - gsmtp
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 09:51:31 UTC] SERVER -> CLIENT: 354 Go ahead 41be03b00d2f7-b4f8a0a2851sm6297670a12.37 - gsmtp
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 09:51:28 +0000
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: Subject: [KnockOut] Password Reset
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: Message-ID: <q9Rwo8res5V03F9PT420ODSkoiit2SGbeEH2Hj1dc@knockout.test>
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: Someone has requested a password reset for the following account:
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: Site Name: KnockOut
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: Username: knockout
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: If this was a mistake, ignore this email and nothing will happen.
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: To reset your password, visit the following address:
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: http://knockout.test/wp-login.php?login=knockout&key=IuWacNyqvGs6ceQh5SbL&action=rp&wp_lang=en_US
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: This password reset request originated from the IP address 127.0.0.1.
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 09:51:31 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 09:51:32 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756893093 41be03b00d2f7-b4f8a0a2851sm6297670a12.37 - gsmtp
+
+[03-Sep-2025 09:51:32 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 09:51:32 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection 41be03b00d2f7-b4f8a0a2851sm6297670a12.37 - gsmtp
+
+[03-Sep-2025 12:59:13 UTC] knockout_handle_contact_form() called
+[03-Sep-2025 12:59:13 UTC] REQUEST_METHOD: POST
+[03-Sep-2025 12:59:13 UTC] POST data keys: contact_nonce, _wp_http_referer, contact_name, contact_email, contact_phone, contact_subject, contact_message, contact_newsletter
+[03-Sep-2025 12:59:13 UTC] Contact form submission detected
+[03-Sep-2025 12:59:13 UTC] Sending contact form email to: junaidafju@gmail.com
+[03-Sep-2025 12:59:13 UTC] From user: SMARTYMUSKAN07@GMAIL.COM (test)
+[03-Sep-2025 12:59:13 UTC] Subject: New Contact Form Submission from KnockOut
+[03-Sep-2025 12:59:14 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d2e1a72fcca58-77282557c4dsm1889947b3a.37 - gsmtp
+
+[03-Sep-2025 12:59:14 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 12:59:14 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 12:59:14 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 12:59:14 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 12:59:15 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 12:59:15 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 12:59:15 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 12:59:15 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 12:59:15 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 12:59:15 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 12:59:15 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 12:59:16 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 12:59:16 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 12:59:16 UTC] SERVER -> CLIENT: 250 2.1.0 OK d2e1a72fcca58-77282557c4dsm1889947b3a.37 - gsmtp
+
+[03-Sep-2025 12:59:16 UTC] CLIENT -> SERVER: RCPT TO:<junaidafju@gmail.com>
+
+[03-Sep-2025 12:59:16 UTC] SERVER -> CLIENT: 250 2.1.5 OK d2e1a72fcca58-77282557c4dsm1889947b3a.37 - gsmtp
+
+[03-Sep-2025 12:59:16 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 12:59:17 UTC] SERVER -> CLIENT: 354 Go ahead d2e1a72fcca58-77282557c4dsm1889947b3a.37 - gsmtp
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 12:59:13 +0000
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: To: junaidafju@gmail.com
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: Reply-To: test <SMARTYMUSKAN07@GMAIL.COM>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: Subject: New Contact Form Submission from KnockOut
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: Message-ID: <HuHbsmDgA9ereYZzZdd3tVNuy9FG9FYYik0Prxjjb0@knockout.test>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:         <title>New Contact Form Submission</title>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             .field { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 4px solid #b0d136; }
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             .field strong { color: #333; }
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> New Contact Form Submission</h1>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <strong>Name:</strong> test
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <strong>Email:</strong> <a href="mailto:SMARTYMUSKAN07@GMAIL.COM">SMARTYMUSKAN07@GMAIL.COM</a>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="field"><strong>Phone:</strong> 08948240252</div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="field"><strong>Subject:</strong> Feedback</div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <strong>Message:</strong><br>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 dsefdh
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="field">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <strong>Newsletter Subscription:</strong> Yes
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <p><strong>Submission Details:</strong></p>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 <p>Time: 2025-09-03 12:59:13<br>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 IP Address: 127.0.0.1<br>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:                 Website: <a href="http://knockout.test">KnockOut</a></p>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 12:59:17 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 12:59:18 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756904358 d2e1a72fcca58-77282557c4dsm1889947b3a.37 - gsmtp
+
+[03-Sep-2025 12:59:18 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 12:59:18 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d2e1a72fcca58-77282557c4dsm1889947b3a.37 - gsmtp
+
+[03-Sep-2025 12:59:18 UTC] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP d9443c01a7336-249065ad5b7sm162783945ad.128 - gsmtp
+
+[03-Sep-2025 12:59:18 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 12:59:19 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 12:59:19 UTC] CLIENT -> SERVER: STARTTLS
+
+[03-Sep-2025 12:59:19 UTC] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[03-Sep-2025 12:59:19 UTC] CLIENT -> SERVER: EHLO knockout.test
+
+[03-Sep-2025 12:59:19 UTC] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2401:4900:1c84:b45c:2580:93de:c818:9426]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[03-Sep-2025 12:59:19 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Sep-2025 12:59:19 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Sep-2025 12:59:19 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 12:59:20 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Sep-2025 12:59:20 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Sep-2025 12:59:20 UTC] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[03-Sep-2025 12:59:20 UTC] CLIENT -> SERVER: MAIL FROM:<junaidafju@gmail.com>
+
+[03-Sep-2025 12:59:20 UTC] SERVER -> CLIENT: 250 2.1.0 OK d9443c01a7336-249065ad5b7sm162783945ad.128 - gsmtp
+
+[03-Sep-2025 12:59:20 UTC] CLIENT -> SERVER: RCPT TO:<SMARTYMUSKAN07@GMAIL.COM>
+
+[03-Sep-2025 12:59:21 UTC] SERVER -> CLIENT: 250 2.1.5 OK d9443c01a7336-249065ad5b7sm162783945ad.128 - gsmtp
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: DATA
+
+[03-Sep-2025 12:59:21 UTC] SERVER -> CLIENT: 354 Go ahead d9443c01a7336-249065ad5b7sm162783945ad.128 - gsmtp
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: Date: Wed, 3 Sep 2025 12:59:18 +0000
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: To: SMARTYMUSKAN07@GMAIL.COM
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: From: =?UTF-8?Q?KnockOut_Sports_Caf=C3=A9?= <junaidafju@gmail.com>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: Subject: Thank you for contacting KnockOut
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: Message-ID: <s47UoJhZhiIDxcKIeKwZPH9Z47dI8OKJBdsiSDQN2U@knockout.test>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:     <!DOCTYPE html>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:     <html>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:     <head>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:         <meta charset="UTF-8">
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:         <title>Thank You for Contacting Us</title>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:         <style>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f4f4f4; }
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             .header { background: linear-gradient(135deg, #b0d136, #00d4ff); padding: 20px; text-align: center; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             .content { margin-bottom: 20px; }
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center; }
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:         </style>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:     </head>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:     <body>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:         <div class="container">
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             <div class="header">
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <h1><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Thank You, test!</h1>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p>KnockOut Sports Café</p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             <div class="content">
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p>Hi test,</p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p>Thank you for reaching out to us! We have successfully received your message and our team will get back to you within 24 hours.</p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p>In the meantime, feel free to:</p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <ul>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3b3.png" alt="🎳" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Book a lane for bowling</li>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f355.png" alt="🍕" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Check out our delicious menu</li>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f3ae.png" alt="🎮" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Explore our e-sports arena</li>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                     <li><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4f8.png" alt="📸" class="wp-smiley" style="height: 1em; max-height: 1em;" /> View our gallery</li>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 </ul>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p>We look forward to seeing you at KnockOut!</p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p>Best regards,<br>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 The KnockOut Team</p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             <div class="footer">
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4cd.png" alt="📍" class="wp-smiley" style="height: 1em; max-height: 1em;" /> RDB Cinemas, Salt Lake, Sector 5, Kolkata, West Bengal (700135)<br>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4de.png" alt="📞" class="wp-smiley" style="height: 1em; max-height: 1em;" /> (555) 123-BOWL | <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4e7.png" alt="📧" class="wp-smiley" style="height: 1em; max-height: 1em;" /> junaidafju@gmail.com</p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:                 <p><em>This is an automated message. Please do not reply to this email.</em></p>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:             </div>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:         </div>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:     </body>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER:     </html>
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: 
+
+[03-Sep-2025 12:59:21 UTC] CLIENT -> SERVER: .
+
+[03-Sep-2025 12:59:22 UTC] SERVER -> CLIENT: 250 2.0.0 OK  1756904363 d9443c01a7336-249065ad5b7sm162783945ad.128 - gsmtp
+
+[03-Sep-2025 12:59:22 UTC] CLIENT -> SERVER: QUIT
+
+[03-Sep-2025 12:59:22 UTC] SERVER -> CLIENT: 221 2.0.0 closing connection d9443c01a7336-249065ad5b7sm162783945ad.128 - gsmtp
+
+[03-Sep-2025 12:59:22 UTC] Contact form email sent successfully to: junaidafju@gmail.com
+[03-Sep-2025 12:59:22 UTC] === KNOCKOUT CONTACT FORM PROCESSING IN TEMPLATE ===
+[03-Sep-2025 12:59:22 UTC] Using global contact form result

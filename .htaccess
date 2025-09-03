@@ -1,4 +1,11 @@
 
+# Redirect from junaid-knockout.test to knockout.test for consistency
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^junaid-knockout\.test$ [NC]
+RewriteRule ^(.*)$ http://knockout.test/$1 [R=301,L]
+</IfModule>
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.

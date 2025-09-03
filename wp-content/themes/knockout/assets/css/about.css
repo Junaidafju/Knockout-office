@@ -2,9 +2,9 @@
 /* DEBUG: If you can see this comment in browser dev tools, the CSS is loading */
 
 /* DEBUG: This rule should make the body have a subtle border if CSS is loading */
-body.page .ko-about-section {
+/* body.page .ko-about-section {
     border-left: 3px solid #b0d136 !important;
-}
+} */
 
 /* Ensure the about hero section separator is at the very top edge */
 .ko-about-hero {

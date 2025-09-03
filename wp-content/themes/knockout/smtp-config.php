@@ -40,8 +40,8 @@ if (!defined('ABSPATH')) {
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587);
 define('SMTP_SECURE', 'tls');
-define('SMTP_USERNAME', 'junaidafju@gmail.com'); // Your Gmail address
-define('SMTP_PASSWORD', 'knkd ngrg ppnd ilue'); // Replace with your Gmail App Password
+define('SMTP_USERNAME', 'junaidafju@gmail.com'); // Replace with your Gmail address
+define('SMTP_PASSWORD', 'knkd ngrg ppnd ilue'); // Replace with your NEW Gmail App Password
 define('SMTP_FROM_EMAIL', 'junaidafju@gmail.com');
 define('SMTP_FROM_NAME', 'KnockOut Sports Café');
 

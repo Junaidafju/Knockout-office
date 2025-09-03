@@ -52,8 +52,16 @@ get_header(); ?>
                     </div>
                     
                     <div class="search-section">
-                        <h3><?php esc_html_e('Or search for what you need:', 'knockout'); ?></h3>
-                        <?php get_search_form(); ?>
+                        <h3><?php esc_html_e('If You Need Help, Contact the Developer of this Website'); ?></h3>
+                        <a class="profile-link" href="https://in.linkedin.com/in/0fficialjunaid" target="_blank" rel="noopener noreferrer">
+                            <div class="profile">
+                                <img class="profile__avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGwMfCWI_Vbeg/profile-displayphoto-scale_200_200/B56Zfy8lMkHoAc-/0/1752127658317?e=2147483647&v=beta&t=DNZHBLJXG-L2M-LtHsY8kMZbrr67LO6XtmygM5cq5xo" alt="MUHAMMAD JUNAID AKHTAR">
+                                <div class="profile__info">
+                                    <h4 class="profile__name">MUHAMMAD JUNAID AKHTAR</h4>
+                                    <p class="profile__role">Web Developer | SDET | Automation QA Engineer</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -188,6 +196,94 @@ get_header(); ?>
     .search-section {
         padding: 2rem;
     }
+}
+</style>
+
+<style>
+/* Skeleton loader card */
+.card {
+    width: 190px;
+    height: 90px;
+    background: #ffff;
+    box-shadow: 0 1px 25px rgba(0,0,0,0.2);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 12px 10px;
+}
+
+.card_load {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    float: left;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    border-radius: 50%;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.card_load_extreme_title {
+    width: 90px;
+    height: 10px;
+    position: relative;
+    float: right;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.card_load_extreme_descripion {
+    width: 90px;
+    height: 47px;
+    position: relative;
+    float: right;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    margin-top: 10px;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+@keyframes load89234 {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* Profile snippet */
+.profile {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.profile__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e5e5;
+}
+
+.profile__name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.profile__role {
+    margin: 2px 0 0 0;
+    font-size: 0.9rem;
+    color: #6c757d;
 }
 </style>
 
