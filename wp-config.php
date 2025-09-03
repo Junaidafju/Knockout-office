@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'KnockOut' );
+define( 'DB_NAME', 'Junaid-Final' );
 
 /** Database username */
 define( 'DB_USER', 'root' );
@@ -38,10 +38,8 @@ define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
 if ( !defined('WP_CLI') ) {
-    // Fix URL consistency - force knockout.test domain
-    // This prevents WordPress from getting confused between different domain variations
-    define( 'WP_SITEURL', 'http://knockout.test' );
-    define( 'WP_HOME',    'http://knockout.test' );
+    define( 'WP_SITEURL', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] );
+    define( 'WP_HOME',    $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] );
 }
 
 
@@ -57,14 +55,14 @@ if ( !defined('WP_CLI') ) {
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
-define( 'SECURE_AUTH_KEY',  '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
-define( 'LOGGED_IN_KEY',    '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
-define( 'NONCE_KEY',        '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
-define( 'AUTH_SALT',        '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
-define( 'SECURE_AUTH_SALT', '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
-define( 'LOGGED_IN_SALT',   '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
-define( 'NONCE_SALT',       '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'AUTH_KEY',         'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'SECURE_AUTH_KEY',  'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'LOGGED_IN_KEY',    'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'NONCE_KEY',        'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'AUTH_SALT',        'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'SECURE_AUTH_SALT', 'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'LOGGED_IN_SALT',   'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'NONCE_SALT',       'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
 
 /**#@-*/
 
@@ -94,29 +92,13 @@ $table_prefix = 'wp_';
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-// Enable debugging for email troubleshooting (disable in production)
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
-define('WP_DEBUG_DISPLAY', false);
+define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
-// Load SMTP configuration for contact form emails
-// Note: get_template_directory() is not available in wp-config.php
-// We'll load SMTP config from functions.php instead
-
-/**
- * Default theme for stateless hosts (e.g. Wasmer). If database options are not persisted
- * or default to a core theme, this ensures WordPress boots with KnockOut.
- */
-if (!defined('WP_DEFAULT_THEME')) {
-    define('WP_DEFAULT_THEME', 'knockout');
-}
 
 
 
 /* That's all, stop editing! Happy publishing. */
-
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
