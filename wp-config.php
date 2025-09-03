@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'Junaid-Final' );
+define( 'DB_NAME', 'KnockOut' );
 
 /** Database username */
 define( 'DB_USER', 'root' );
@@ -55,14 +55,14 @@ if ( !defined('WP_CLI') ) {
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
-define( 'SECURE_AUTH_KEY',  'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
-define( 'LOGGED_IN_KEY',    'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
-define( 'NONCE_KEY',        'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
-define( 'AUTH_SALT',        'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
-define( 'SECURE_AUTH_SALT', 'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
-define( 'LOGGED_IN_SALT',   'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
-define( 'NONCE_SALT',       'uYiSmtsfOe81rX2IZJTJKtTQb8zNKjo5dgPEXhwXRqo9L9ShXCsHwTdEBylhx4JB' );
+define( 'AUTH_KEY',         '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'SECURE_AUTH_KEY',  '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'LOGGED_IN_KEY',    '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'NONCE_KEY',        '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'AUTH_SALT',        '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'SECURE_AUTH_SALT', '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'LOGGED_IN_SALT',   '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
+define( 'NONCE_SALT',       '26iwSCVQiIagXms5ChaiyK8TjRGsXgMT3Zrz80LChvrgt3igF0p7bnfuNL4WP75m' );
 
 /**#@-*/
 
@@ -96,9 +96,18 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+/**
+ * Default theme for stateless hosts (e.g. Wasmer). If database options are not persisted
+ * or default to a core theme, this ensures WordPress boots with KnockOut.
+ */
+if (!defined('WP_DEFAULT_THEME')) {
+    define('WP_DEFAULT_THEME', 'knockout');
+}
+
 
 
 /* That's all, stop editing! Happy publishing. */
+
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
